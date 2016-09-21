@@ -2,127 +2,81 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>lak</title>
-    <script src="../js/jquery-3.0.0.min.js"></script>
+    <title>3D动画</title>
     <style>
-        div{
-            height: 100px;
-            width: 100px;
-            background-color: red;
+        .my3d{
+            height: 400px;
+            width: 500px;
+            perspective: 1000px;
+            perspective-origin: 50% 50%;
+            overflow: hidden;
         }
-        .d{
-            background-color: #ffc863;
+        .page-group{
+            height: 60%;
+            width: 80%;
+            margin: 0 auto;
+            webkit-transform-style: preserve-3d;
+            position: relative;
         }
+        .page{
+            height: 100%;
+            width: 100%;
+            color: white;
+            background-color: #ffbc54;
+            font-size: 35px;
+            position: absolute;
+            text-align: center;
+            line-height: 100%;
+        }
+        #page1{
+            -webkit-transform-origin:bottom ;
+            transition: all 1s;
 
+        }
+        #page2, #page3 ,#page4, #page5, #page6{
+            -webkit-transform-origin:bottom ;
+            transition: all 1s;
+            transform: rotateX(90deg);
+        }
+        button{
+            margin-left: 80px;
+        }
     </style>
+    <script>
+        var index=1;
+        function prev() {
+            if(index==1)
+                return;
+            var nowpage=document.getElementById('page'+index);
+            nowpage.style.webkitTransform="rotateX(90deg)";
+            index--;
+            var nextpage=document.getElementById('page'+index)
+            nextpage.style.webkitTransform="rotateX(0)";
+        }
+        function next() {
+            if(index==6)
+            {
+              return;
+            }
+            var nowpage=document.getElementById('page'+index);
+            nowpage.style.webkitTransform="rotateX(-90deg)";
+            index++;
+            var nextpage=document.getElementById('page'+index)
+            nextpage.style.webkitTransform="rotateX(0)";
+        }
+    </script>
 </head>
 <body>
-<<<<<<< HEAD
-<div id="div" class="d"></div>
-<ul>
-    <li>2</li>
-    <li>3</li>
-    <li>2</li>
-    <li>5</li>
-    <li>4</li>
-    <li>5</li>
-    <li>2</li>
-    <li>7</li>
-    <li></li>
-    <li></li>
-    <li>7jj</li>
-    <li>8</li>
-    <li>2jj</li>
-</ul>
-<ul>
-    <li>2</li>
-    <li>3</li>
-    <li>2</li>
-    <li style="display: none">5</li>
-    <li style="display: none">5</li>
-    <li style="display: none">5</li>
-    <li></li>
-    <li></li>
-    <li>2</li>
-    <li>7</li>
-    <li>8</li>
-    <li>2</li>
-</ul>
-<p id="p">fffffffffffffffffffffffffffffffffffffffff</p>
-<!--<button>nn</button>-->
-<script>ffffffffggggggggg</script>
-=======
-<button>hidden</button>
-<button>show</button>
-<button>fadein</button>
-<button>fadeout</button>
-<button>fadetoggle</button>
-<button>fadetoAUTO</button>
-<button>fadetohandle</button>
-<button>animation</button>
-<button>stop</button>
-<a href="动画.html">click</a>
-<div>
-    <ul>
-        <li>555</li>
-        <li>555</li>
-        <li>555</li>
-        <li>555</li>
-    </ul>
+<div class="my3d">
+<div class="page-group">
+    <div class="page" id="page1">1</div>
+    <div class="page" id="page2">2</div>
+    <div class="page" id="page3">3</div>
+    <div class="page" id="page4">4</div>
+    <div class="page" id="page5">5</div>
+    <div class="page" id="page6">6</div>
 </div>
-
->>>>>>> origin/master
+</div>
+<button  onclick="prev()">prev</button> <button  onclick="next()">next</button>
 </body>
 </html>
-<script>
-    $("#div").click(function () {
-        $("#div:animated").toggleClass("d");//添加一个类
-    })
-    function lak() {
-        $("#div").slideToggle(1000,"linear");
-    }
-//    setInterval(lak,1000)
-    $(function () {
-        $("ul li:eq(3)").css({"color":"red"})//eq(2)索引值，正负都可以，负数索引是-1开始
-//-----------------------------------------
-        //css({"":"","":""})花括号相当于对象
-        $("#div").click(function () {
-            $(this).css({
-                width:function (index,value) {
-//                    document.write(index);//获取当前的索引
-//                    document.write(value);//获取当前的 宽度
-                   return parseInt(value)*1.2;
-                },
-                height:function (index,value) {
-                    return parseInt(value)*1.5;
-                }
-            });
-        });
-        //---------------------------------
-        $("ul").each(function () {
-            $(this).find("li:eq(0)").css("color","red");//遍历索引从0开始
-        });
-        $("ul").each(function () {
-            $(this).find("li:empty").text("xoxoxoxo").css("color","yellow");//过滤空的标签
-        });
-
-            $("ul li:nth-child(even)").css("color","green");//索引从1开始 odd偶数，even奇数
-        //-----------------------------------过滤空的标签
-//        $("ul li:empty").text("lak").css("color","red");
-        $("ul li:empty").text("lak").css("color","red").fadeTo(5000,0.5);
-//        $("li:parent").css("background","green").fadeTo(3000,0.5);//有子元素的标签-----时间，透明度
-        //-------------------------------
-        $("ul:has(p)").text("lak").css("color","red").fadeTo(5000,0.5);//ul中所有的p标签都会应用，相当于css中的后代选择器
-       //-----------------------寻找隐藏的元素的个数
-//        var x=$("li:hidden").length;
-//        var x=$("body").find(":hidden");//把body内外的script标签也都选择出来
-//        $("#p").html(x.css("display","block"));
-//--------------------------------------------------
-//        $("ul").get().reverse();
-
-<<<<<<< HEAD
-    });
-</script>
-=======
-</script>
->>>>>>> origin/master
