@@ -1,0 +1,222 @@
+@charset "utf-8";
+*{
+    word-break: break-all;
+}
+.img-div{
+    background-color: rgba(255, 177, 72, 0.81);
+    height: 232px;
+    width: 100%;
+    position: relative;
+    top: 110px;
+}
+.img-div h1,p{
+    width: 200px;
+    height: auto;
+    position: relative;
+    left: 45%;
+    top: 50px;
+    color: white;
+    font-weight: bolder;
+}
+.img-div p{
+    left: 48%;
+    font-weight: bolder;
+    font-size: 20px;
+    color: white;
+}
+.img-div ul{
+    width: 100%;
+    height: 70px;
+    /*background-color: green;*/
+    margin-top: 7.5%;
+}
+.img-div ul li{
+    width: 250px;
+    height: 70px;
+    line-height: 70px;
+    /*background-color: #fff7b5;*/
+    float: left;
+    /*margin-left: 30px;*/
+    position: relative;
+    left: 15%;
+    font-size: 20px;
+    color: white;
+    border-left: solid 1px white;
+}
+.img-div ul li:hover{
+    background-color: rgba(255, 38, 28, 0.4);
+    /*transform: rotateZ(360deg);*/
+    transition: all 2s;
+    font-weight: bolder;
+    font-size: 25px;
+}
+/*介绍*/
+.introduce{
+    width: 100%;
+    height: 450px;
+    background-color: rgba(0, 0, 0, 0.75);
+    position: relative;
+    top: 110px;
+}
+.introduce h1{
+    height: 50px;
+    width: 300px;
+    text-align: center;
+    line-height: 50px;
+    /*background-color: red;*/
+    position: relative;
+    left: 40%;
+    top: 20%;
+    color: white;
+}
+.introduce p{
+    height: 50%;
+    width: 90%;
+    text-align: center;
+    /*line-height: 50px;*/
+    /*background-color: red;*/
+    position: relative;
+    left: 5%;
+    top: 35%;
+    color: white;
+    font-weight: bolder;
+}
+/*-----------------------*/
+.center-img{
+    position: relative;
+    top: 110px;
+    width: 100%;
+    height: 220px;
+}
+/*--------------------------*/
+.cul-ground{
+    position: relative;
+    top: 110px;
+    height: 700px;
+    width: 100%;
+    background: url("../img/u=3331408453,1571440622&fm=21&gp=0.jpg");
+    background-size: 100% 100%;
+}
+.cul{
+    position: relative;
+    height: 700px;
+    width: 100%;
+    background: rgba(253, 255, 255, 0.5);
+}
+.cul h1{
+    height: 50px;
+    width: 300px;
+    text-align: center;
+    line-height: 50px;
+    /*background-color: red;*/
+    position: relative;
+    left: 40%;
+    top: 20%;
+    color: #ff1f1c;
+    text-decoration: underline;
+    text-decoration: none;
+}
+.cul li{
+    height: 320px;
+    width: 260px;
+    background-color: #fff7f4;
+    position: relative;
+    left: 1%;
+    top: 35%;
+    margin-left: 50px;
+    float: left;
+}
+.cul li h1{
+    height: 100px;
+    width: 250px;
+    margin: 0;
+    position: relative;
+    left: 1%;
+    top: 10%;
+    border-radius: 50%;
+    border: solid 2px rgba(0, 0, 0, 0.34);
+}
+.cul li div{
+    height: 100px;
+    width: 250px;
+    margin: 0;
+    position: relative;
+    left: 1%;
+    top: 20%;
+    font-weight: bolder;
+}
+.cul li:hover{
+    color: orange;
+}
+.cul li:hover h1{
+    background-color: orange;
+}
+.cul h2{
+    height: 50px;
+    width: 200px;
+    position: absolute;
+    bottom: 10px;
+    left: 40%;
+    line-height: 50px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bolder;
+}
+/*=================================*/
+.message{
+    position: relative;
+    top: 110px;
+    height: 600px;
+    width: 100%;
+    background: url("../img/u=2285070144,463082439&fm=21&gp=0.jpg");
+    background-size: 100% 100%;
+}
+.message h1{
+    height: 50px;
+    width: 300px;
+    text-align: center;
+    line-height: 50px;
+    /*background-color: red;*/
+    position: relative;
+    left: 40%;
+    top: 20%;
+    color: #ff1f1c;
+    text-decoration: underline;
+    text-decoration: none;
+}
+.message .table{
+    width: 40%;
+    height: 50%;
+    /*background-color: red;*/
+    position: relative;
+    top: 200px;
+    float: left;
+}
+.message .table table{
+    /*border: solid 2px black;*/
+    margin-top: 50px;
+    margin-left: 50px;
+}
+input
+{
+    height: 100%;
+    width: 100%;
+}
+.message .information{
+    width: 60%;
+    height: 50%;
+    background-color: #34ff3e;
+    position: relative;
+    float: left;
+    top: 200px;
+}
+
+
+
+
+/*脚部*/
+footer{
+    height: 300px;
+    width: 100%;
+    background-color: rgba(20, 48, 50, 0.61);
+}
