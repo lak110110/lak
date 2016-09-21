@@ -1,0 +1,793 @@
+@charset "utf-8";
+@font-face {font-family: 'iconfont';
+  src: url('../css/font/iconfont.eot'); /* IE9*/
+  src: url('../css/font/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../css/font/iconfont.woff') format('woff'), /* chrome、firefox */
+  url('../css/font/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('../css/font/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+.iconfont{
+  font-family:"iconfont" !important;
+  font-size:16px;font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;}
+
+/* 可以带到css文件*/
+//只有Less文件认识
+//声明为变量@
+.container(@w,@h,@color,@line-h)
+{
+  width: @w;
+  height: @h;
+  background-color: @color;
+  line-height: @line-h;
+}
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration:none;
+  text-align: center;
+  list-style: none;
+  font-family: 微软雅黑;
+  //font-family: 华文行楷;
+}
+/* welcome 最顶部*/
+.welcome{
+  .container(100%,40px,rgba(255,229,136,1),40px);
+  background: url("../img/bc53ba7a499ed14b885a1f2858c54b94.gif");
+  background-size: 100% 100%;
+  color: white;
+  p{
+    color: #ff7316;
+  }
+  a{
+    color: white;
+    &:hover{ color: red;}
+  }
+}
+/* top-nav 导航------------------------------*/
+.top-nav{
+  .container(90%,113px, rgba(198, 245, 255, 0.01),113px);
+  margin: 0 auto;
+  //overflow: hidden;
+  position: relative;
+  /* drop-down-------------------------------------- 下拉*/
+  .drop-down{
+    .container(100%,0px, white,0px);
+    overflow: hidden;
+    margin: 0 auto;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    left:0;
+    z-index: 99;
+
+    li{
+      .container(15%,113px, rgba(255, 255, 249,0),113px);
+      float: left;
+      margin-left: 18px;
+      img{
+        height: 70%;
+        width: 60%;
+        margin-top: 15px;
+        animation: none;
+        border-radius: 10px;
+        &:hover{
+          opacity: 0.5;
+        }
+      }
+      a{
+        position: relative;
+        font-size: 14px;
+        top: 0px;
+        border-right:2px solid rgba(255, 131, 19, 0.92);
+        &:hover{
+          color: red;
+        }
+      }
+    }
+  }
+  img{
+    .container(10%,113px,rgba(255,229,136,1),113px);
+    display: block;
+    float: left;
+    border-radius: 1000px;
+    animation: img 4s;
+    animation-iteration-count: 110;
+  }
+  ul{
+    .container(88%,113px, rgb(254, 255, 249),113px);
+    float: left;
+    margin-left: 20px;
+    li{
+      .container(82px,113px, rgb(253, 255, 255),113px);
+      float: left;
+      margin-left: 10px;
+      font-size: 16px;
+      //font-weight: bold;
+      &:hover .drop-down{
+        height: 113px;
+        transition: all 1s;
+      }
+      a{
+        color: black;
+        &:hover{
+          color: red;
+        }
+      }
+    }
+    .login
+    {
+      .login-form
+      {
+        .container(475px,0px, rgba(23, 255, 255,0),274px);
+        position: relative;
+        left: -300px;
+        z-index: 90;
+        display: block;
+        overflow: hidden;
+        background: url("../../qqmail/图片/u=3649567160,108542336&fm=21&gp=0.jpg");
+        background-size: 100% 100%;
+        table{
+          .container(100%,50px, rgba(255, 248, 149, 0),50px);
+          input{
+            height: 100%;
+            width: 100%;
+            background-color: rgba(119, 186, 255, 0);
+          }
+        }
+      }
+    }
+    .s{
+      float: right;
+      margin-right: 10px;
+      width: 140px;
+      #s1,#s2{
+        height: 50%;
+        width: 90%;
+        font-size: 16px;
+        //font-weight: bold;
+      }
+    }
+  }
+}
+/* menu 主菜单*/
+.menu{
+  .container(90%,400px, rgb(205, 255, 182),400px);
+  margin: 0 auto;
+  /* img--------图片轮播*/
+  .img{
+    float: left;
+    .container(80%,400px, rgb(255, 227, 99),400px);
+    position: relative;
+    img{
+      height: 100%;
+      width: 100%;
+    }
+    //---------/* menu 侧边菜单*/---------------
+    .aside-menu{
+      position: absolute;
+      .container(25%,400px,'',400px);
+      left: 0;
+      top:0;
+      ul{
+        height: 100%;
+        width: 100%;
+        background-color:  rgba(239, 255, 216, 0.3);
+        li{
+          .container(100%,40px, '',40px);
+          font-size: 20px;
+          color: white;
+          &:hover{
+            background-color: rgb(0,153,229);
+          }
+          &:hover .aside-menu-div{
+            width: 120px;
+          }
+          &:hover span{
+            transform: rotateZ(360deg);
+            transition: all 1s;
+          }
+          span{
+            float: right;
+            margin-right: 10px;
+            font-size: 16px;
+          }
+          .aside-menu-div{
+            position: absolute;
+            top:0;
+            left: 246px;
+            height: 400px;
+            width: 0px;
+            background-color: #fffff7;
+            overflow: hidden;
+            a{
+              display: block;
+              border-radius: 50px;
+              .container(70%,80px, rgba(210, 226, 255, 0.73),80px);
+              margin: 0 auto;
+              margin-top: 15px;
+              border: 1px solid white;
+              &:hover{
+                background: white;
+                border: 1px solid #1d1cff;
+                color: red;
+                transition: all 1s;
+                transform: rotateZ(360deg);
+
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  /*信息轮播*/
+  .message{
+    float: right;
+    .container(20%,400px, rgb(145, 166, 255),400px);
+    .message-title{
+      .container(100%,60px, rgb(87, 93, 255),60px);
+      font-size: 20px;
+      font-weight: bolder;
+    }
+    .message-banner{
+      .container(100%,340px, rgb(98, 255, 58),'');
+      overflow: hidden;
+      ul{
+        .container(100%,800px, rgb(255, 44, 44),'');
+        position: relative;
+        li{
+          .container(100%,30px, rgb(255, 250, 245),30px);
+          &:hover{
+            background-color: rgb(145, 166, 255);
+          }
+          &:hover a{
+            color: rgb(255, 46, 27);
+          }
+        }
+      }
+    }
+  }
+}
+/*介绍---------------------------------------*/
+.introduce{
+  .container(90%,130px, rgba(205, 255, 182,0.2),130px);
+  margin: 0 auto;
+  ul{
+    .container(232px,130px, rgb(250, 255, 251),130px);
+    float: left;
+    li{
+      .container(74px,60px, rgba(127, 127, 127, 0.3),60px);
+      float: left;
+      margin-top: 4px;
+      margin-left: 1px;
+      border-left: 1px solid #2c2fff;
+      border-radius: 5px;
+      &:hover i{
+        color: #ff3336;
+      }
+      &:hover a{
+        border-bottom: 1px solid  #0c0eff;
+      }
+      a{
+        display: block;
+        height: 90%;
+        width: 80%;
+        border-bottom: 1px solid red;
+        margin: 2px auto;
+        color: black;
+      }
+    }
+  }
+  div{
+    .container(970px,130px, rgb(183, 181, 255),130px);
+    float: right;
+    overflow: hidden;
+    ul{
+      height: 100%;
+      width: 1928px;
+      position: relative;
+      li{
+        height: 100%;//130px
+        width: 232px;
+        background:url("../img/bbf038d0d32c002eb1afdfc0ad1d9b1d.png");
+        background-size: 100% 100%;
+        float: left;
+        margin-left: 8px;
+        position: relative;
+        font-size: 16px;
+        &:hover .li-left,&:hover .li-right{
+          width: 0px;
+        }
+        .li-bottom{
+          height: 50px;
+          width: 132px;
+          position: absolute;
+          left: 50px;
+          top: 80px;
+          overflow: hidden;
+          background-color: rgba(255, 203, 130, 0);
+          &:hover{
+            height: 130px;
+            width: 232px;
+            left: 0;
+            top: 0px;
+            transition: all 1s;
+            background-color: rgba(255, 203, 130, 0.4);
+          }
+        }
+        .li-left{
+          height: 130px;
+          width: 35px;
+          position: absolute;
+          left: 0px;
+          top: 0px;
+          overflow: hidden;
+          background-color: rgba(255, 203, 130, 0);
+          &:hover{
+            width: 232px;
+            transition: all 1s;
+            background-color: rgba(255, 203, 130, 0.4);
+          }
+        }
+        .li-right{
+          height: 130px;
+          width: 35px;
+          position: absolute;
+          right: 0px;
+          top: 0px;
+          overflow: hidden;
+          background-color: rgba(255, 203, 130, 0);
+          &:hover{
+            width: 232px;
+            transition: all 1s;
+            background-color: rgba(255, 203, 130, 0.4);
+          }
+        }
+      }
+    }
+  }
+
+}
+/*推荐内容-----------------------*/
+.advice{
+  .container(90%,350px, rgba(108, 255, 112,0),350px);
+  margin: 0 auto;
+  h3{
+    .container(40%,50px, rgb(255, 247, 255),50px);
+    float: left;
+  }
+  .button{
+    .container(20%,50px, rgba(183, 181, 0,0),50px);
+    float: right;
+    button{
+      .container(38%,40px, rgb(255, 245, 253),40px);
+      font-size: 20px;
+      font-weight: bolder;
+    }
+  }
+  //----------------------------------------------
+  .img-show{
+    .container(100%,300px, rgba(108, 25, 11,0),300px);
+    clear: both;
+    overflow: hidden;
+    ul{
+      .container(200%,300px, rgba(108, 25, 11,0),300px);
+      position: relative;//------------------最重要的设置，不然不会动，相对原来位置移动
+      //----------------------------------------------------------
+      .odd{
+        &:hover figure{
+          transform: rotateX(180deg);
+          transition:  ease-in-out 1s;
+        }
+        &:hover div{
+          transform: rotateX(0deg);
+          background: url("../img/8cbeaf51f3deb48fb58172e4f31f3a292cf578e0.jpg");
+          background-size: 100% 100%;
+          transition:  ease-in-out 1s;
+          //color: white;
+        }
+      }
+      .odd div{
+        transform: rotateX(-180deg);
+      }
+//------------------------------------------------------------------------
+      li{
+        .container(9.5%,298px, rgba(108, 25, 11,0),300px);
+        float: left;
+        margin-left: 10px;
+        border: 1px solid rgba(177, 181, 186, 0.8);
+        position: relative;
+        perspective: 1000px;
+        perspective-origin: 50% 50%;
+        webkit-transform-style: preserve-3d;
+        &:hover figure{
+          transform: rotateY(180deg);
+          transition:  ease-in-out 1s;
+        }
+        &:hover div{
+          transform: rotateY(0deg);
+          transition:  ease-in-out 1s;
+        }
+        figure{
+          .container(100%,100%, rgba(255, 47, 86, 0),100%);
+          overflow: hidden;
+          position: absolute;
+          backface-visibility: hidden;
+          &:hover img, &:hover a{
+            transform: scale(1.2);
+            transition: all 1s;
+            color: red;
+            font-size: 25px;
+          }
+          img{
+            height: 50%;
+            width: 90%;
+            margin-top: 20%;
+          }
+          a{
+            display: block;
+            font-size: 20px;
+            font-weight: bolder;
+            .container(100%,auto, rgba(255, 46, 27, 0),auto);
+            margin: 20px auto;
+          }
+        }
+        div{
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          background: url("../img/u=2341091565,1450120333&fm=21&gp=0.jpg");
+          background-size: 100% 100%;
+          transform: rotateY(-180deg);
+          backface-visibility: hidden;//*旋转之后背面隐藏不可见*!*/
+          h2{
+            .container(100%,40px, rgba(255, 46, 27, 0),40px);
+            color: red;
+          }
+          p{
+            .container(100%,20px, rgba(255, 46, 27, 0),20px);
+            text-align: left;
+          }
+
+        }
+
+      }
+    }
+  }
+}
+//------------------------------------------------------------内容
+.content
+{
+  .container(90%,auto, rgba(255, 46, 27, 0),auto);
+  margin: 0 auto;
+  //-----------------------------------------------------------导航
+  .content-nav-ul{
+    .container(90%,0px, rgba(94,94,94,0.6),50px);
+    position: fixed;
+    overflow: hidden;
+    top:0;
+    z-index: 77;
+    li{
+      .container(10%,50px, rgba(94,94,94,0),50px);
+      float: left;
+      font-size: 16px;
+      font-weight: bolder;
+      a{
+        color: white;
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+      &:hover{
+        background-color: rgba(255, 254, 49, 0.6);
+        transition: all 1s;
+      }
+    }
+  }
+  //--------------------------------------------------java
+  .java,.cjiajia,.php,.pyon,.h5,.ui{
+    .container(100%,457px, rgba(212, 255, 183, 0.44),457px);
+    //----------------------------------java-img
+    .java-img{
+      .container(232px,350px, rgba(26, 255, 22, 0.5),350px);
+      float: left;
+      h2{
+        .container(100%,50px, rgba(26, 255, 22, 0),50px);
+      }
+      p{
+        .container(100%,20px, rgba(26, 255, 22, 0),20px);
+        font-weight: bold;
+      }
+      img{
+        display: block;
+        margin: 20px auto;
+      }
+    }
+    //------------------------------------------------java-超链接
+    a{
+      display: block;
+      .container(232px,170px, rgba(255, 146, 41,0),170px);
+      float: left;
+      margin-left: 10px;
+      margin-top: 5px;
+      position: relative;
+      overflow: hidden;
+      color:black;
+      border: 1px solid darkgrey;
+      &:hover{
+        transition: all 1s;
+      }
+      &:hover img{
+        transform: scale(1.2);
+        transition: all 0.5s;
+      }
+      img{
+        display: block;
+        margin: 20px auto;
+      }
+      span{
+        position: relative;
+        top:-70px;
+        font-size: 16px;
+        transition: all 1s;
+
+      }
+      &:hover .detail,&:hover span{
+        height: 170px;
+        top: 0px;
+        transition: all 1s;
+      }
+      .detail{
+        .container(232px,0px, rgba(45, 229, 22, 0.42),170px);
+        position: absolute;
+        top: 170px;
+        text-overflow:ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        color: red;
+        font-size: 16px;
+      }
+    }
+    //------------------------------------------java-班级
+    .java-class-ul{
+      clear: both;
+      .container(100%,30px, rgba(255, 39, 45, 0),30px);
+      border-top:2px #4bff1f solid;
+      position: relative;
+      top: 10px;
+      li{
+        .container(10%,30px, rgba(255, 39, 45, 0),30px);
+        float: left;
+
+        &:hover{
+          background-color: rgba(84, 255, 51, 0.7);
+          transition: all 1s;
+        }
+
+//888888888888888888888888888888888888888888888888888888888888888888888888888888888888
+        &:hover .base-div{
+          height: 60px;
+        }
+        //8888888888888888888888888888888888888888888888888888888888888888888888888888
+        .base-div{
+          .container(1214px,0px, rgba(84, 255, 51, 0.5),30px);
+          overflow: hidden;
+          position: absolute;
+          left: 0;
+          .base-ul,.work-ul{
+            .container(1214px,30px, rgba(255, 180, 69, 0),30px);
+            li{
+              .container(13%,30px, rgba(255, 180, 69, 0),30px);
+              float: left;
+              margin-left: 5px;
+              a{
+                .container(84%,26px, rgba(255, 180, 69, 0),26px);
+                display: block;
+                float: left;
+                margin: 0;
+                border: none;
+              }
+              strong{
+                .container(15%,26px, rgba(187,187,187, 1),26px);
+                display: block;
+                float: left;
+                border-radius: 5px;
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+    }
+  }
+  //--------------------------------------各自背景样式
+  .cjiajia{
+    a{
+      .detail{background-color:rgba(241,204,101,0.4)}
+    }
+    .java-class-ul {
+      border-top: 2px rgb(241,204,101) solid;
+      li{
+        &:hover{
+          background-color: rgba(241,204,101,0.5);
+          transition: all 0.5s;
+        }
+        &:hover .base-div{
+          height: 60px;
+          background-color: rgba(241,204,101,0.5);
+        }
+      }
+    }
+  }
+
+  .php{
+    a{
+    .detail{background-color:rgba(78,198,128,0.4)}
+  }
+    .java-class-ul {
+      border-top: 2px rgb(78,198,128) solid;
+      li{
+        &:hover{
+          background-color: rgba(78,198,128,0.5);
+          transition: all 0.5s;
+        }
+        &:hover .base-div{
+          height: 60px;
+          background-color: rgba(78,198,128,0.5);
+        }
+      }
+    }
+  }
+
+  .pyon{
+    a{
+    .detail{background-color:rgba(239,21,16,0.3)}
+  }
+    .java-class-ul {
+      border-top: 2px rgb(239,21,16) solid;
+      li{
+        &:hover{
+          background-color: rgba(239,21,16,0.5);
+          transition: all 0.5s;
+        }
+        &:hover .base-div{
+          height: 60px;
+          background-color: rgba(239,21,16,0.5);
+        }
+      }
+    }}
+
+  .ui{
+    a{
+    .detail{background-color:rgba(231,150,151,0.4)}
+  }
+    .java-class-ul {
+      border-top: 2px rgb(231,150,151) solid;
+      li{
+        &:hover{
+          background-color: rgba(231,150,151,0.5);
+          transition: all 0.5s;
+        }
+        &:hover .base-div{
+          height: 60px;
+          background-color: rgba(231,150,151,0.5);
+        }
+      }
+    }
+  }
+
+}
+//----------------------------------------ios和火箭动画
+.rock-div{
+  .container(100%,400px, rgba(81,192,255,1),400px);
+  .con-div{
+    .container(60%,400px, rgba(81,192,255,0.3),400px);
+    float: right;
+    position: relative;
+    overflow: hidden;
+  }
+  h1{
+    .container(7%,400px, rgba(81,192,255,1),400px);
+    float: left;
+    &:hover{
+      color: white;
+      transition: all 1s;
+    }
+    strong{
+      display: block;
+      width: 100%;
+      height: 30%;
+      line-height: 120px;
+      font-size: 80px;
+
+    }
+
+  }
+  #img2,#img3,#img5,#img4,#img1{
+    position: absolute;
+  }
+  #img1{
+     top: 88px;
+     left: 270px;
+   }
+  #img2{
+    top: 200px;
+    left: 270px;
+  }
+  #img3{
+    top: 88px;
+    right: 250px;
+  }
+  #img4{
+    top: 200px;
+    right: 250px;
+  }
+  #img5{
+    top: 290px;
+    right: 290px;
+  }
+}
+//---------------------------------------------脚部
+footer{
+  .container(90%,auto, rgba(81,192,255,0.3),auto);
+  margin: 0 auto;
+}
+//------------------------------------------------返回顶部
+body .return-top{
+  .container(5%,100px, rgba(255, 67, 52, 0),100px);
+  position: fixed;//fixed是根据窗口为原点进行偏移定位的，也就是说它不会根据滚动条的滚动而进行偏移。
+  right: -40px;
+  bottom: 100px;
+  &:hover{
+    right: 0px;
+    transition: all 1s;
+    border-radius: 50px;
+  }
+  a,img{
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: relative;
+    color: red;
+    font-size: 30px;
+    &:hover div{
+      top: 0px;
+      .container(100%,100px, rgba(255, 254, 98, 0.65),100px);
+      transition: all 1s;
+    }
+    div{
+      position: absolute;
+      top: 100px;
+      overflow: hidden;
+      height: 0px;
+      width: 100%;
+      border-radius: 50px;
+    }
+  }
+}
+
+
+@keyframes img{
+  0%{
+    transform: rotateZ(0deg);
+  }
+
+  25%{
+    transform: rotateZ(90deg);
+  }
+  50%{
+    transform: rotateZ(180deg);
+  }
+  75%{
+    transform: rotateZ(270deg);
+  }
+  100%{
+    transform: rotateZ(360deg);
+  }
+}

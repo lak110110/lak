@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+    <script src="../../jquery/jquery-3.0.0.min.js"></script>
+    <style>
+        .con{
+            background-color: rgb(81,192,255);
+            height: 350px;
+            width: 350px;
+            position: relative;
+            perspective: 8000px;/*视距。眼镜离屏幕的距离*/
+            perspective-origin: 50% 50%;/*观视点*/
+            webkit-transform-style: preserve-3d;/*告诉浏览器此区域 变换的方式为3*/
+        }
+        .con span{
+            display: inline-block;
+            height: 50px;
+            width: 50px;
+            line-height: 50px;
+            position: absolute;
+            bottom: 0px;
+            background-color: rgba(81,192,255, 0.5);
+            font-size: 35px;
+            font-weight: bolder;
+            text-align: center;
+            border-radius: 20px;
+            box-shadow: 5px 5px 15px black;
+            bottom: 5px;
+            color: white;
+        }
+        .con:hover span{
+            background-color: rgba(31, 129, 255, 0.8);
+        }
+        .con .right{
+            right: 0px;
+        }
+        .con img{
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+        }
+        .con .img-div{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            border-radius: 50%;
+            overflow: hidden;
+            transition: all 1s;
+            -webkit-transform-origin:bottom ;/*绕X轴的底部旋转*/
+            box-shadow: 5px 5px 20px #131313;
+        }
+        .con .img-div .img-content{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            border-radius: 50%;
+            top: 100%;
+            left: 0;
+            line-height: 350px;
+            text-align: center;
+            background-color: rgba(255, 244, 138, 0.46);
+            font-family: 华文行楷;
+            font-size: 20px;
+        }
+        .con .img-div:hover .img-content{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            border-radius: 50%;
+            top: 0px;
+            left: 0;
+            transition: all 1s;
+        }
+        #img-div2, #img-div3, #img-div4, #img-div5, #img-div6{
+            transform: rotateX(90deg);
+        }
+    </style>
+</head>
+<body>
+<div class="con" id="con">
+    <div id="img-div1" class="img-div">
+        <img id="img1" src="../img/u=3649567160,108542336&fm=21&gp=0.jpg" alt="">
+        <div class="img-content">
+            落霞与孤鹜齐飞
+            秋水共长天一色
+        </div>
+    </div>
+    <div id="img-div2" class="img-div">
+        <img id="img2" src="../img/dba396c04f4af37c829f1f57f6bcea42.gif" alt="">
+        <div class="img-content">
+            曾经沧海难为水
+            除却巫山不是云
+        </div>
+    </div>
+    <div id="img-div3" class="img-div">
+        <img id="img3" src="../img/be5265e3541c4d469b43df0ef24b8009.gif" alt="">
+        <div class="img-content">
+            向来情深，奈何缘浅
+        </div>
+    </div>
+    <div id="img-div4" class="img-div">
+        <img id="img4" src="../img/3fcc0450bdb8c2e1b887c6365656dcf2.gif" alt="">
+        <div class="img-content">
+            溺水三千，独取一瓢
+        </div>
+    </div>
+    <div id="img-div5" class="img-div">
+        <img id="img5" src="../img/bbf038d0d32c002eb1afdfc0ad1d9b1d.png" alt="">
+        <div class="img-content">
+            倾我一生一世念，来如飞花散似烟
+        </div>
+    </div>
+    <div id="img-div6" class="img-div">
+        <img id="img6" src="../img/1ea189bf7ed08010f1ee1cd1ada0f668.gif" alt="">
+        <div class="img-content">
+            最是人间留不住，朱颜辞镜花辞树
+        </div>
+    </div>
+    <span id="next" class="right" onclick="netx()"> > </span>
+    <span id="prev" class="left" onclick="prev()"> < </span>
+
+</div>
+</body>
+</html>
+<script>
+    var index=1;
+    function netx() {
+        var nowimg=document.getElementById("img-div"+index);
+        nowimg.style.transform="rotateX(90deg)";
+        index--;
+        if(index==0)
+        {
+            index=6;
+        }
+        var nextimg=document.getElementById("img-div"+index);
+        nextimg.style.transform="rotateX(0deg)";
+    }
+    function prev() {
+        var nowimg=document.getElementById("img-div"+index);
+        nowimg.style.transform="rotateX(-90deg)";
+        index++;
+        if(index==7)
+        {
+            index=1;
+        }
+        var nextimg=document.getElementById("img-div"+index);
+        nextimg.style.transform="rotateX(0deg)";
+    }
+   var t=setInterval(netx,2000);
+    $("#prev,#next").click(function () {
+        clearInterval(t);
+    });
+    $('.con').mouseover(function () {
+        clearInterval(t);
+    });
+    $('.con').mouseout(function () {
+      t=setInterval(netx,2000);
+    });
+
+
+</script>

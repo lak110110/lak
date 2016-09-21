@@ -1,0 +1,1037 @@
+@charset "utf-8";
+@font-face {
+  font-family: 'iconfont';
+  src: url('../css/font/iconfont.eot');
+  src: url('../css/font/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../css/font/iconfont.woff') format('woff'), /* chrome、firefox */ url('../css/font/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url('../css/font/iconfont.svg#iconfont') format('svg');
+  
+  /* IE9*/
+  /* iOS 4.1- */
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* 可以带到css文件*/
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  text-align: center;
+  list-style: none;
+  font-family: 微软雅黑;
+}
+/* welcome 最顶部*/
+.welcome {
+  width: 100%;
+  height: 40px;
+  background-color: #ffe588;
+  line-height: 40px;
+  background: url("../img/bc53ba7a499ed14b885a1f2858c54b94.gif");
+  background-size: 100% 100%;
+  color: white;
+}
+.welcome p {
+  color: #ff7316;
+}
+.welcome a {
+  color: white;
+}
+.welcome a:hover {
+  color: red;
+}
+/* top-nav 导航------------------------------*/
+.top-nav {
+  width: 90%;
+  height: 113px;
+  background-color: rgba(198, 245, 255, 0.01);
+  line-height: 113px;
+  margin: 0 auto;
+  position: relative;
+  /* drop-down-------------------------------------- 下拉*/
+}
+.top-nav .drop-down {
+  width: 100%;
+  height: 0px;
+  background-color: #ffffff;
+  line-height: 0px;
+  overflow: hidden;
+  margin: 0 auto;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  z-index: 99;
+}
+.top-nav .drop-down li {
+  width: 15%;
+  height: 113px;
+  background-color: rgba(255, 255, 249, 0);
+  line-height: 113px;
+  float: left;
+  margin-left: 18px;
+}
+.top-nav .drop-down li img {
+  height: 70%;
+  width: 60%;
+  margin-top: 15px;
+  animation: none;
+  border-radius: 10px;
+}
+.top-nav .drop-down li img:hover {
+  opacity: 0.5;
+}
+.top-nav .drop-down li a {
+  position: relative;
+  font-size: 14px;
+  top: 0px;
+  border-right: 2px solid rgba(255, 131, 19, 0.92);
+}
+.top-nav .drop-down li a:hover {
+  color: red;
+}
+.top-nav img {
+  width: 10%;
+  height: 113px;
+  background-color: #ffe588;
+  line-height: 113px;
+  display: block;
+  float: left;
+  border-radius: 1000px;
+  animation: img 4s;
+  animation-iteration-count: 110;
+}
+.top-nav ul {
+  width: 88%;
+  height: 113px;
+  background-color: #fefff9;
+  line-height: 113px;
+  float: left;
+  margin-left: 20px;
+}
+.top-nav ul li {
+  width: 82px;
+  height: 113px;
+  background-color: #fdffff;
+  line-height: 113px;
+  float: left;
+  margin-left: 10px;
+  font-size: 16px;
+}
+.top-nav ul li:hover .drop-down {
+  height: 113px;
+  transition: all 1s;
+}
+.top-nav ul li a {
+  color: black;
+}
+.top-nav ul li a:hover {
+  color: red;
+}
+.top-nav ul .login .login-form {
+  width: 475px;
+  height: 0px;
+  background-color: rgba(23, 255, 255, 0);
+  line-height: 274px;
+  position: relative;
+  left: -300px;
+  z-index: 90;
+  display: block;
+  overflow: hidden;
+  background: url("../../qqmail/图片/u=3649567160,108542336&fm=21&gp=0.jpg");
+  background-size: 100% 100%;
+}
+.top-nav ul .login .login-form table {
+  width: 100%;
+  height: 50px;
+  background-color: rgba(255, 248, 149, 0);
+  line-height: 50px;
+}
+.top-nav ul .login .login-form table input {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(119, 186, 255, 0);
+}
+.top-nav ul .s {
+  float: right;
+  margin-right: 10px;
+  width: 140px;
+}
+.top-nav ul .s #s1,
+.top-nav ul .s #s2 {
+  height: 50%;
+  width: 90%;
+  font-size: 16px;
+}
+/* menu 主菜单*/
+.menu {
+  width: 90%;
+  height: 400px;
+  background-color: #cdffb6;
+  line-height: 400px;
+  margin: 0 auto;
+  /* img--------图片轮播*/
+  /*信息轮播*/
+}
+.menu .img {
+  float: left;
+  width: 80%;
+  height: 400px;
+  background-color: #ffe363;
+  line-height: 400px;
+  position: relative;
+}
+.menu .img img {
+  height: 100%;
+  width: 100%;
+}
+.menu .img .aside-menu {
+  position: absolute;
+  width: 25%;
+  height: 400px;
+  background-color: '';
+  line-height: 400px;
+  left: 0;
+  top: 0;
+}
+.menu .img .aside-menu ul {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(239, 255, 216, 0.3);
+}
+.menu .img .aside-menu ul li {
+  width: 100%;
+  height: 40px;
+  background-color: '';
+  line-height: 40px;
+  font-size: 20px;
+  color: white;
+}
+.menu .img .aside-menu ul li:hover {
+  background-color: #0099e5;
+}
+.menu .img .aside-menu ul li:hover .aside-menu-div {
+  width: 120px;
+}
+.menu .img .aside-menu ul li:hover span {
+  transform: rotateZ(360deg);
+  transition: all 1s;
+}
+.menu .img .aside-menu ul li span {
+  float: right;
+  margin-right: 10px;
+  font-size: 16px;
+}
+.menu .img .aside-menu ul li .aside-menu-div {
+  position: absolute;
+  top: 0;
+  left: 246px;
+  height: 400px;
+  width: 0px;
+  background-color: #fffff7;
+  overflow: hidden;
+}
+.menu .img .aside-menu ul li .aside-menu-div a {
+  display: block;
+  border-radius: 50px;
+  width: 70%;
+  height: 80px;
+  background-color: rgba(210, 226, 255, 0.73);
+  line-height: 80px;
+  margin: 0 auto;
+  margin-top: 15px;
+  border: 1px solid white;
+}
+.menu .img .aside-menu ul li .aside-menu-div a:hover {
+  background: white;
+  border: 1px solid #1d1cff;
+  color: red;
+  transition: all 1s;
+  transform: rotateZ(360deg);
+}
+.menu .message {
+  float: right;
+  width: 20%;
+  height: 400px;
+  background-color: #91a6ff;
+  line-height: 400px;
+}
+.menu .message .message-title {
+  width: 100%;
+  height: 60px;
+  background-color: #575dff;
+  line-height: 60px;
+  font-size: 20px;
+  font-weight: bolder;
+}
+.menu .message .message-banner {
+  width: 100%;
+  height: 340px;
+  background-color: #62ff3a;
+  line-height: '';
+  overflow: hidden;
+}
+.menu .message .message-banner ul {
+  width: 100%;
+  height: 800px;
+  background-color: #ff2c2c;
+  line-height: '';
+  position: relative;
+}
+.menu .message .message-banner ul li {
+  width: 100%;
+  height: 30px;
+  background-color: #fffaf5;
+  line-height: 30px;
+}
+.menu .message .message-banner ul li:hover {
+  background-color: #91a6ff;
+}
+.menu .message .message-banner ul li:hover a {
+  color: #ff2e1b;
+}
+/*介绍---------------------------------------*/
+.introduce {
+  width: 90%;
+  height: 130px;
+  background-color: rgba(205, 255, 182, 0.2);
+  line-height: 130px;
+  margin: 0 auto;
+}
+.introduce ul {
+  width: 232px;
+  height: 130px;
+  background-color: #fafffb;
+  line-height: 130px;
+  float: left;
+}
+.introduce ul li {
+  width: 74px;
+  height: 60px;
+  background-color: rgba(127, 127, 127, 0.3);
+  line-height: 60px;
+  float: left;
+  margin-top: 4px;
+  margin-left: 1px;
+  border-left: 1px solid #2c2fff;
+  border-radius: 5px;
+}
+.introduce ul li:hover i {
+  color: #ff3336;
+}
+.introduce ul li:hover a {
+  border-bottom: 1px solid  #0c0eff;
+}
+.introduce ul li a {
+  display: block;
+  height: 90%;
+  width: 80%;
+  border-bottom: 1px solid red;
+  margin: 2px auto;
+  color: black;
+}
+.introduce div {
+  width: 970px;
+  height: 130px;
+  background-color: #b7b5ff;
+  line-height: 130px;
+  float: right;
+  overflow: hidden;
+}
+.introduce div ul {
+  height: 100%;
+  width: 1928px;
+  position: relative;
+}
+.introduce div ul li {
+  height: 100%;
+  width: 232px;
+  background: url("../img/bbf038d0d32c002eb1afdfc0ad1d9b1d.png");
+  background-size: 100% 100%;
+  float: left;
+  margin-left: 8px;
+  position: relative;
+  font-size: 16px;
+}
+.introduce div ul li:hover .li-left,
+.introduce div ul li:hover .li-right {
+  width: 0px;
+}
+.introduce div ul li .li-bottom {
+  height: 50px;
+  width: 132px;
+  position: absolute;
+  left: 50px;
+  top: 80px;
+  overflow: hidden;
+  background-color: rgba(255, 203, 130, 0);
+}
+.introduce div ul li .li-bottom:hover {
+  height: 130px;
+  width: 232px;
+  left: 0;
+  top: 0px;
+  transition: all 1s;
+  background-color: rgba(255, 203, 130, 0.4);
+}
+.introduce div ul li .li-left {
+  height: 130px;
+  width: 35px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  overflow: hidden;
+  background-color: rgba(255, 203, 130, 0);
+}
+.introduce div ul li .li-left:hover {
+  width: 232px;
+  transition: all 1s;
+  background-color: rgba(255, 203, 130, 0.4);
+}
+.introduce div ul li .li-right {
+  height: 130px;
+  width: 35px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  overflow: hidden;
+  background-color: rgba(255, 203, 130, 0);
+}
+.introduce div ul li .li-right:hover {
+  width: 232px;
+  transition: all 1s;
+  background-color: rgba(255, 203, 130, 0.4);
+}
+/*推荐内容-----------------------*/
+.advice {
+  width: 90%;
+  height: 350px;
+  background-color: rgba(108, 255, 112, 0);
+  line-height: 350px;
+  margin: 0 auto;
+}
+.advice h3 {
+  width: 40%;
+  height: 50px;
+  background-color: #fff7ff;
+  line-height: 50px;
+  float: left;
+}
+.advice .button {
+  width: 20%;
+  height: 50px;
+  background-color: rgba(183, 181, 0, 0);
+  line-height: 50px;
+  float: right;
+}
+.advice .button button {
+  width: 38%;
+  height: 40px;
+  background-color: #fff5fd;
+  line-height: 40px;
+  font-size: 20px;
+  font-weight: bolder;
+}
+.advice .img-show {
+  width: 100%;
+  height: 300px;
+  background-color: rgba(108, 25, 11, 0);
+  line-height: 300px;
+  clear: both;
+  overflow: hidden;
+}
+.advice .img-show ul {
+  width: 200%;
+  height: 300px;
+  background-color: rgba(108, 25, 11, 0);
+  line-height: 300px;
+  position: relative;
+}
+.advice .img-show ul .odd:hover figure {
+  transform: rotateX(180deg);
+  transition: ease-in-out 1s;
+}
+.advice .img-show ul .odd:hover div {
+  transform: rotateX(0deg);
+  background: url("../img/8cbeaf51f3deb48fb58172e4f31f3a292cf578e0.jpg");
+  background-size: 100% 100%;
+  transition: ease-in-out 1s;
+}
+.advice .img-show ul .odd div {
+  transform: rotateX(-180deg);
+}
+.advice .img-show ul li {
+  width: 9.5%;
+  height: 298px;
+  background-color: rgba(108, 25, 11, 0);
+  line-height: 300px;
+  float: left;
+  margin-left: 10px;
+  border: 1px solid rgba(177, 181, 186, 0.8);
+  position: relative;
+  perspective: 1000px;
+  perspective-origin: 50% 50%;
+  webkit-transform-style: preserve-3d;
+}
+.advice .img-show ul li:hover figure {
+  transform: rotateY(180deg);
+  transition: ease-in-out 1s;
+}
+.advice .img-show ul li:hover div {
+  transform: rotateY(0deg);
+  transition: ease-in-out 1s;
+}
+.advice .img-show ul li figure {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 47, 86, 0);
+  line-height: 100%;
+  overflow: hidden;
+  position: absolute;
+  backface-visibility: hidden;
+}
+.advice .img-show ul li figure:hover img,
+.advice .img-show ul li figure:hover a {
+  transform: scale(1.2);
+  transition: all 1s;
+  color: red;
+  font-size: 25px;
+}
+.advice .img-show ul li figure img {
+  height: 50%;
+  width: 90%;
+  margin-top: 20%;
+}
+.advice .img-show ul li figure a {
+  display: block;
+  font-size: 20px;
+  font-weight: bolder;
+  width: 100%;
+  height: auto;
+  background-color: rgba(255, 46, 27, 0);
+  line-height: auto;
+  margin: 20px auto;
+}
+.advice .img-show ul li div {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: url("../img/u=2341091565,1450120333&fm=21&gp=0.jpg");
+  background-size: 100% 100%;
+  transform: rotateY(-180deg);
+  backface-visibility: hidden;
+}
+.advice .img-show ul li div h2 {
+  width: 100%;
+  height: 40px;
+  background-color: rgba(255, 46, 27, 0);
+  line-height: 40px;
+  color: red;
+}
+.advice .img-show ul li div p {
+  width: 100%;
+  height: 20px;
+  background-color: rgba(255, 46, 27, 0);
+  line-height: 20px;
+  text-align: left;
+}
+.content {
+  width: 90%;
+  height: auto;
+  background-color: rgba(255, 46, 27, 0);
+  line-height: auto;
+  margin: 0 auto;
+}
+.content .content-nav-ul {
+  width: 90%;
+  height: 0px;
+  background-color: rgba(94, 94, 94, 0.6);
+  line-height: 50px;
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  z-index: 77;
+}
+.content .content-nav-ul li {
+  width: 10%;
+  height: 50px;
+  background-color: rgba(94, 94, 94, 0);
+  line-height: 50px;
+  float: left;
+  font-size: 16px;
+  font-weight: bolder;
+}
+.content .content-nav-ul li a {
+  color: white;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.content .content-nav-ul li:hover {
+  background-color: rgba(255, 254, 49, 0.6);
+  transition: all 1s;
+}
+.content .java,
+.content .cjiajia,
+.content .php,
+.content .pyon,
+.content .h5,
+.content .ui {
+  width: 100%;
+  height: 457px;
+  background-color: rgba(212, 255, 183, 0.44);
+  line-height: 457px;
+}
+.content .java .java-img,
+.content .cjiajia .java-img,
+.content .php .java-img,
+.content .pyon .java-img,
+.content .h5 .java-img,
+.content .ui .java-img {
+  width: 232px;
+  height: 350px;
+  background-color: rgba(26, 255, 22, 0.5);
+  line-height: 350px;
+  float: left;
+}
+.content .java .java-img h2,
+.content .cjiajia .java-img h2,
+.content .php .java-img h2,
+.content .pyon .java-img h2,
+.content .h5 .java-img h2,
+.content .ui .java-img h2 {
+  width: 100%;
+  height: 50px;
+  background-color: rgba(26, 255, 22, 0);
+  line-height: 50px;
+}
+.content .java .java-img p,
+.content .cjiajia .java-img p,
+.content .php .java-img p,
+.content .pyon .java-img p,
+.content .h5 .java-img p,
+.content .ui .java-img p {
+  width: 100%;
+  height: 20px;
+  background-color: rgba(26, 255, 22, 0);
+  line-height: 20px;
+  font-weight: bold;
+}
+.content .java .java-img img,
+.content .cjiajia .java-img img,
+.content .php .java-img img,
+.content .pyon .java-img img,
+.content .h5 .java-img img,
+.content .ui .java-img img {
+  display: block;
+  margin: 20px auto;
+}
+.content .java a,
+.content .cjiajia a,
+.content .php a,
+.content .pyon a,
+.content .h5 a,
+.content .ui a {
+  display: block;
+  width: 232px;
+  height: 170px;
+  background-color: rgba(255, 146, 41, 0);
+  line-height: 170px;
+  float: left;
+  margin-left: 10px;
+  margin-top: 5px;
+  position: relative;
+  overflow: hidden;
+  color: black;
+  border: 1px solid darkgrey;
+}
+.content .java a:hover,
+.content .cjiajia a:hover,
+.content .php a:hover,
+.content .pyon a:hover,
+.content .h5 a:hover,
+.content .ui a:hover {
+  transition: all 1s;
+}
+.content .java a:hover img,
+.content .cjiajia a:hover img,
+.content .php a:hover img,
+.content .pyon a:hover img,
+.content .h5 a:hover img,
+.content .ui a:hover img {
+  transform: scale(1.2);
+  transition: all 0.5s;
+}
+.content .java a img,
+.content .cjiajia a img,
+.content .php a img,
+.content .pyon a img,
+.content .h5 a img,
+.content .ui a img {
+  display: block;
+  margin: 20px auto;
+}
+.content .java a span,
+.content .cjiajia a span,
+.content .php a span,
+.content .pyon a span,
+.content .h5 a span,
+.content .ui a span {
+  position: relative;
+  top: -70px;
+  font-size: 16px;
+  transition: all 1s;
+}
+.content .java a:hover .detail,
+.content .cjiajia a:hover .detail,
+.content .php a:hover .detail,
+.content .pyon a:hover .detail,
+.content .h5 a:hover .detail,
+.content .ui a:hover .detail,
+.content .java a:hover span,
+.content .cjiajia a:hover span,
+.content .php a:hover span,
+.content .pyon a:hover span,
+.content .h5 a:hover span,
+.content .ui a:hover span {
+  height: 170px;
+  top: 0px;
+  transition: all 1s;
+}
+.content .java a .detail,
+.content .cjiajia a .detail,
+.content .php a .detail,
+.content .pyon a .detail,
+.content .h5 a .detail,
+.content .ui a .detail {
+  width: 232px;
+  height: 0px;
+  background-color: rgba(45, 229, 22, 0.42);
+  line-height: 170px;
+  position: absolute;
+  top: 170px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  color: red;
+  font-size: 16px;
+}
+.content .java .java-class-ul,
+.content .cjiajia .java-class-ul,
+.content .php .java-class-ul,
+.content .pyon .java-class-ul,
+.content .h5 .java-class-ul,
+.content .ui .java-class-ul {
+  clear: both;
+  width: 100%;
+  height: 30px;
+  background-color: rgba(255, 39, 45, 0);
+  line-height: 30px;
+  border-top: 2px #4bff1f solid;
+  position: relative;
+  top: 10px;
+}
+.content .java .java-class-ul li,
+.content .cjiajia .java-class-ul li,
+.content .php .java-class-ul li,
+.content .pyon .java-class-ul li,
+.content .h5 .java-class-ul li,
+.content .ui .java-class-ul li {
+  width: 10%;
+  height: 30px;
+  background-color: rgba(255, 39, 45, 0);
+  line-height: 30px;
+  float: left;
+}
+.content .java .java-class-ul li:hover,
+.content .cjiajia .java-class-ul li:hover,
+.content .php .java-class-ul li:hover,
+.content .pyon .java-class-ul li:hover,
+.content .h5 .java-class-ul li:hover,
+.content .ui .java-class-ul li:hover {
+  background-color: rgba(84, 255, 51, 0.7);
+  transition: all 1s;
+}
+.content .java .java-class-ul li:hover .base-div,
+.content .cjiajia .java-class-ul li:hover .base-div,
+.content .php .java-class-ul li:hover .base-div,
+.content .pyon .java-class-ul li:hover .base-div,
+.content .h5 .java-class-ul li:hover .base-div,
+.content .ui .java-class-ul li:hover .base-div {
+  height: 60px;
+}
+.content .java .java-class-ul li .base-div,
+.content .cjiajia .java-class-ul li .base-div,
+.content .php .java-class-ul li .base-div,
+.content .pyon .java-class-ul li .base-div,
+.content .h5 .java-class-ul li .base-div,
+.content .ui .java-class-ul li .base-div {
+  width: 1214px;
+  height: 0px;
+  background-color: rgba(84, 255, 51, 0.5);
+  line-height: 30px;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+}
+.content .java .java-class-ul li .base-div .base-ul,
+.content .cjiajia .java-class-ul li .base-div .base-ul,
+.content .php .java-class-ul li .base-div .base-ul,
+.content .pyon .java-class-ul li .base-div .base-ul,
+.content .h5 .java-class-ul li .base-div .base-ul,
+.content .ui .java-class-ul li .base-div .base-ul,
+.content .java .java-class-ul li .base-div .work-ul,
+.content .cjiajia .java-class-ul li .base-div .work-ul,
+.content .php .java-class-ul li .base-div .work-ul,
+.content .pyon .java-class-ul li .base-div .work-ul,
+.content .h5 .java-class-ul li .base-div .work-ul,
+.content .ui .java-class-ul li .base-div .work-ul {
+  width: 1214px;
+  height: 30px;
+  background-color: rgba(255, 180, 69, 0);
+  line-height: 30px;
+}
+.content .java .java-class-ul li .base-div .base-ul li,
+.content .cjiajia .java-class-ul li .base-div .base-ul li,
+.content .php .java-class-ul li .base-div .base-ul li,
+.content .pyon .java-class-ul li .base-div .base-ul li,
+.content .h5 .java-class-ul li .base-div .base-ul li,
+.content .ui .java-class-ul li .base-div .base-ul li,
+.content .java .java-class-ul li .base-div .work-ul li,
+.content .cjiajia .java-class-ul li .base-div .work-ul li,
+.content .php .java-class-ul li .base-div .work-ul li,
+.content .pyon .java-class-ul li .base-div .work-ul li,
+.content .h5 .java-class-ul li .base-div .work-ul li,
+.content .ui .java-class-ul li .base-div .work-ul li {
+  width: 13%;
+  height: 30px;
+  background-color: rgba(255, 180, 69, 0);
+  line-height: 30px;
+  float: left;
+  margin-left: 5px;
+}
+.content .java .java-class-ul li .base-div .base-ul li a,
+.content .cjiajia .java-class-ul li .base-div .base-ul li a,
+.content .php .java-class-ul li .base-div .base-ul li a,
+.content .pyon .java-class-ul li .base-div .base-ul li a,
+.content .h5 .java-class-ul li .base-div .base-ul li a,
+.content .ui .java-class-ul li .base-div .base-ul li a,
+.content .java .java-class-ul li .base-div .work-ul li a,
+.content .cjiajia .java-class-ul li .base-div .work-ul li a,
+.content .php .java-class-ul li .base-div .work-ul li a,
+.content .pyon .java-class-ul li .base-div .work-ul li a,
+.content .h5 .java-class-ul li .base-div .work-ul li a,
+.content .ui .java-class-ul li .base-div .work-ul li a {
+  width: 84%;
+  height: 26px;
+  background-color: rgba(255, 180, 69, 0);
+  line-height: 26px;
+  display: block;
+  float: left;
+  margin: 0;
+  border: none;
+}
+.content .java .java-class-ul li .base-div .base-ul li strong,
+.content .cjiajia .java-class-ul li .base-div .base-ul li strong,
+.content .php .java-class-ul li .base-div .base-ul li strong,
+.content .pyon .java-class-ul li .base-div .base-ul li strong,
+.content .h5 .java-class-ul li .base-div .base-ul li strong,
+.content .ui .java-class-ul li .base-div .base-ul li strong,
+.content .java .java-class-ul li .base-div .work-ul li strong,
+.content .cjiajia .java-class-ul li .base-div .work-ul li strong,
+.content .php .java-class-ul li .base-div .work-ul li strong,
+.content .pyon .java-class-ul li .base-div .work-ul li strong,
+.content .h5 .java-class-ul li .base-div .work-ul li strong,
+.content .ui .java-class-ul li .base-div .work-ul li strong {
+  width: 15%;
+  height: 26px;
+  background-color: #bbbbbb;
+  line-height: 26px;
+  display: block;
+  float: left;
+  border-radius: 5px;
+}
+.content .cjiajia a .detail {
+  background-color: rgba(241, 204, 101, 0.4);
+}
+.content .cjiajia .java-class-ul {
+  border-top: 2px #f1cc65 solid;
+}
+.content .cjiajia .java-class-ul li:hover {
+  background-color: rgba(241, 204, 101, 0.5);
+  transition: all 0.5s;
+}
+.content .cjiajia .java-class-ul li:hover .base-div {
+  height: 60px;
+  background-color: rgba(241, 204, 101, 0.5);
+}
+.content .php a .detail {
+  background-color: rgba(78, 198, 128, 0.4);
+}
+.content .php .java-class-ul {
+  border-top: 2px #4ec680 solid;
+}
+.content .php .java-class-ul li:hover {
+  background-color: rgba(78, 198, 128, 0.5);
+  transition: all 0.5s;
+}
+.content .php .java-class-ul li:hover .base-div {
+  height: 60px;
+  background-color: rgba(78, 198, 128, 0.5);
+}
+.content .pyon a .detail {
+  background-color: rgba(239, 21, 16, 0.3);
+}
+.content .pyon .java-class-ul {
+  border-top: 2px #ef1510 solid;
+}
+.content .pyon .java-class-ul li:hover {
+  background-color: rgba(239, 21, 16, 0.5);
+  transition: all 0.5s;
+}
+.content .pyon .java-class-ul li:hover .base-div {
+  height: 60px;
+  background-color: rgba(239, 21, 16, 0.5);
+}
+.content .ui a .detail {
+  background-color: rgba(231, 150, 151, 0.4);
+}
+.content .ui .java-class-ul {
+  border-top: 2px #e79697 solid;
+}
+.content .ui .java-class-ul li:hover {
+  background-color: rgba(231, 150, 151, 0.5);
+  transition: all 0.5s;
+}
+.content .ui .java-class-ul li:hover .base-div {
+  height: 60px;
+  background-color: rgba(231, 150, 151, 0.5);
+}
+.rock-div {
+  width: 100%;
+  height: 400px;
+  background-color: #51c0ff;
+  line-height: 400px;
+}
+.rock-div .con-div {
+  width: 60%;
+  height: 400px;
+  background-color: rgba(81, 192, 255, 0.3);
+  line-height: 400px;
+  float: right;
+  position: relative;
+  overflow: hidden;
+}
+.rock-div h1 {
+  width: 7%;
+  height: 400px;
+  background-color: #51c0ff;
+  line-height: 400px;
+  float: left;
+}
+.rock-div h1:hover {
+  color: white;
+  transition: all 1s;
+}
+.rock-div h1 strong {
+  display: block;
+  width: 100%;
+  height: 30%;
+  line-height: 120px;
+  font-size: 80px;
+}
+.rock-div #img2,
+.rock-div #img3,
+.rock-div #img5,
+.rock-div #img4,
+.rock-div #img1 {
+  position: absolute;
+}
+.rock-div #img1 {
+  top: 88px;
+  left: 270px;
+}
+.rock-div #img2 {
+  top: 200px;
+  left: 270px;
+}
+.rock-div #img3 {
+  top: 88px;
+  right: 250px;
+}
+.rock-div #img4 {
+  top: 200px;
+  right: 250px;
+}
+.rock-div #img5 {
+  top: 290px;
+  right: 290px;
+}
+footer {
+  width: 90%;
+  height: auto;
+  background-color: rgba(81, 192, 255, 0.3);
+  line-height: auto;
+  margin: 0 auto;
+}
+body .return-top {
+  width: 5%;
+  height: 100px;
+  background-color: rgba(255, 67, 52, 0);
+  line-height: 100px;
+  position: fixed;
+  right: -40px;
+  bottom: 100px;
+}
+body .return-top:hover {
+  right: 0px;
+  transition: all 1s;
+  border-radius: 50px;
+}
+body .return-top a,
+body .return-top img {
+  height: 100%;
+  width: 100%;
+  display: block;
+  position: relative;
+  color: red;
+  font-size: 30px;
+}
+body .return-top a:hover div,
+body .return-top img:hover div {
+  top: 0px;
+  width: 100%;
+  height: 100px;
+  background-color: rgba(255, 254, 98, 0.65);
+  line-height: 100px;
+  transition: all 1s;
+}
+body .return-top a div,
+body .return-top img div {
+  position: absolute;
+  top: 100px;
+  overflow: hidden;
+  height: 0px;
+  width: 100%;
+  border-radius: 50px;
+}
+@keyframes img {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  25% {
+    transform: rotateZ(90deg);
+  }
+  50% {
+    transform: rotateZ(180deg);
+  }
+  75% {
+    transform: rotateZ(270deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}

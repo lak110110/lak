@@ -1,0 +1,1736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>main</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/second.css">
+    <link rel="stylesheet" href="../css/three.css">
+    <script src="../js/main.js"></script>
+    <script src="../js/jquery-3.0.0.min.js"></script>
+
+</head>
+<body>
+<div class="welcome">
+    <p style="height: 100%;width: 30%;line-height: 40px;float: left">我们正在寻找的就是你！<a href="">是你!就是你</a></p>
+    <p style="height: 100%;width: 40%;line-height: 40px;float: right">改变中国信息格局，我们正在行动     全国咨询热线：400-618-4000</p>
+</div>
+<div id="top-nav" class="top-nav">
+    <img src="../img/be5265e3541c4d469b43df0ef24b8009.gif" alt="">
+    <ul>
+        <li id="fli">
+            <a href="">免费资源</a>
+        <ul class="drop-down" id="dropdown1">
+        <li><img src="../img/1.jpg" alt=""><a href="">在线资源</a></li>
+        <li><img src="../img/1.jpg" alt=""><a href="">在线资源</a></li>
+        <li><img src="../img/1.jpg" alt=""><a href="">在线资源</a></li>
+        <li><img src="../img/1.jpg" alt=""><a href="">在线资源</a></li>
+        <li><img src="../img/1.jpg" alt=""><a href="">在线资源</a></li>
+        <li><img src="../img/1.jpg" alt=""><a href="">在线资源</a></li>
+        </ul>
+        </li>
+        <li><a href="">在线资源</a>
+            <ul class="drop-down" id="dropdown2">
+                <li><img src="../img/2.jpg" alt=""><a href="">在线资源</a></li>
+                <li><img src="../img/2.jpg" alt=""><a href="">在线资源</a></li>
+                <li><img src="../img/2.jpg" alt=""><a href="">在线资源</a></li>
+                <li><img src="../img/2.jpg" alt=""><a href="">在线资源</a></li>
+                <li><img src="../img/2.jpg" alt=""><a href="">在线资源</a></li>
+                <li><img src="../img/2.jpg" alt=""><a href="">在线资源</a></li>
+            </ul></li>
+        <li><a href="">学科指南</a>
+            <ul class="drop-down" id="dropdown3">
+                <li><img src="../img/3.jpg" alt=""><a href="">在线资源</a></li>
+                <li><img src="../img/3.jpg" alt=""><a href="">在线资源</a></li>
+                <li><img src="../img/3.jpg" alt=""><a href="">在线资源</a></li>
+                <li><img src="../img/3.jpg" alt=""><a href="">在线资源</a></li>
+                <li><img src="../img/3.jpg" alt=""><a href="">在线资源</a></li>
+                <li><img src="../img/3.jpg" alt=""><a href="">在线资源</a></li>
+            </ul></li>
+        <li><a href="">学习交流</a></li>
+        <li><a href="">直播区间</a></li>
+        <li><a href="">学院区间</a></li>
+        <li><a href="">合作区间</a></li>
+        <li  style="width: 92px;cursor: pointer" class="login"> <span id="login">登录/注册</span>
+            <form id="login-form" class="login-form">
+                <table>
+                   <tr>
+                       <td style="font-size: 30px" colspan="2">login/register</td>
+                   </tr>
+                    <tr>
+                       <td>name:</td>
+                       <td><input style="font-size: 30px" type="text" placeholder="input your name" required></td>
+                   </tr>
+                    <tr>
+                       <td>sex:</td>
+                        <td><input style="font-size: 30px" type="text" placeholder="your sex" required></td>
+                    </tr>
+                    <tr>
+                       <td>age:</td>
+                        <td><input style="font-size: 30px" type="text" placeholder="input your age" required></td>
+                    </tr>
+                    <tr >
+                       <td colspan="2">
+                           <input style="width: 40%;height: 50px;font-size: 30px" type="submit" value="register">
+                           <input style="width: 40%;height: 52px;font-size: 30px" type="submit" value="login">
+                       </td>
+                   </tr>
+                </table>
+
+            </form>
+
+        </li>
+
+        <li class="s">
+            <select name="" id="s1" >
+                <option value="cs">--选择--</option>
+
+            </select>
+        </li>
+        <li class="s">
+            <select name="" id="s2" onchange="drop()">
+                <option>--全国方位--</option>
+                <option value="yt">烟台</option>
+                <option value="tw">台湾</option>
+                <option value="ww">湾湾</option>
+        </select>
+        </li>
+    </ul>
+</div>
+<!--图片菜单-->
+<div class="menu">
+    <div class="img">
+        <!--图片轮播区-->
+        <div class="img-con" id="img-con">
+            <ul id="img-con-ul">
+                <li id="ul-li1"><img src="../img/2016190714192900.jpg" alt=""></li>
+                <li id="ul-li2"><img src="../img/6.jpg" alt=""></li>
+                <li id="ul-li3"><img src="../img/7.jpg" alt=""></li>
+                <li id="ul-li4"><img src="../img/8.jpg" alt=""></li>
+                <li id="ul-li5"><img src="../img/9.jpg" alt=""></li>
+            </ul>
+            <div class="img-con-left" id="img-con-left"><</div>
+            <div class="img-con-right" id="img-con-right">></div>
+            <div class="list">
+                <li class="li" id="list1">1</li>
+                <li class="li" id="list2">2</li>
+                <li class="li" id="list3">3</li>
+                <li class="li" id="list4">4</li>
+                <li class="li" id="list5">5</li>
+            </div>
+        </div>
+        <div class="aside-menu">
+            <ul>
+                <hr>
+                <li style="margin-top: 20px">java <span>></span>
+                    <div class="aside-menu-div">
+                        <a href="">课程详情</a>
+                        <a href="">就业详情</a>
+                        <a href="">师资详情</a>
+                        <a href="">视频详情</a>
+                    </div>
+                </li>
+                <li>java<span>></span>
+                    <div class="aside-menu-div">
+                        <a href="">就业详情</a>
+                        <a href="">课程详情</a>
+                        <a href="">师资详情</a>
+                        <a href="">视频详情</a>
+                    </div></li>
+                <li>java<span>></span>
+                    <div class="aside-menu-div">
+                        <a href="">师资详情</a>
+                        <a href="">课程详情</a>
+                        <a href="">就业详情</a>
+                        <a href="">视频详情</a>
+                    </div></li>
+                <li>java<span>></span>
+                    <div class="aside-menu-div">
+                        <a href="">课程详情</a>
+                        <a href="">就业详情</a>
+                        <a href="">视频详情</a>
+                    </div></li>
+                <li>java<span>></span>
+                    <div class="aside-menu-div">
+                        <a href="">师资详情</a>
+                        <a href="">就业详情</a>
+                        <a href="">视频详情</a>
+                    </div></li>
+                <li>java<span>></span>
+                    <div class="aside-menu-div">
+                        <a href="">师资详情</a>
+                        <a href="">课程详情</a>
+                        <a href="">视频详情</a>
+                    </div></li>
+                <li>java<span>></span></li>
+                <li>java<span>></span></li>
+                <li>java<span>></span></li>
+                <!--<li>java<span>></span></li>-->
+            </ul>
+        </div>
+
+    </div>
+    <div class="message">
+        <div class="message-title">信息港</div>
+        <div class="message-banner" >
+            <ul id="message-banner">
+                <li><a href="">1.啊哈，你是谁</a></li>
+                <li><a href="">2.啊哈，你是谁</a></li>
+                <li><a href="">3.啊哈，你是谁</a></li>
+                <li><a href="">4.啊哈，你是谁</a></li>
+                <li><a href="">5.啊哈，你是谁</a></li>
+                <li><a href="">6.啊哈，你是谁</a></li>
+                <li><a href="">7.啊哈，你是谁</a></li>
+                <li><a href="">8.啊哈，你是谁</a></li>
+                <li><a href="">9.啊哈，你是谁</a></li>
+                <li><a href="">1.啊哈，你是谁</a></li>
+                <li><a href="">2.啊哈，你是谁</a></li>
+                <li><a href="">3.啊哈，你是谁</a></li>
+                <li><a href="">4.啊哈，你是谁</a></li>
+                <li><a href="">5.啊哈，你是谁</a></li>
+                <li><a href="">6.啊哈，你是谁</a></li>
+                <li><a href="">7.啊哈，你是谁</a></li>
+                <li><a href="">8.啊哈，你是谁</a></li>
+                <li><a href="">9.啊哈，你是谁</a></li>
+                <li><a href="">1.啊哈，你是谁</a></li>
+                <li><a href="">2.啊哈，你是谁</a></li>
+                <li><a href="">3.啊哈，你是谁</a></li>
+                <li><a href="">4.啊哈，你是谁</a></li>
+                <li><a href="">5.啊哈，你是谁</a></li>
+                <li><a href="">6.啊哈，你是谁</a></li>
+                <li><a href="">7.啊哈，你是谁</a></li>
+                <li><a href="">8.啊哈，你是谁</a></li>
+                <li><a href="">9.啊哈，你是谁</a></li>
+                <li><a href="">1.啊哈，你是谁</a></li>
+                <li><a href="">2.啊哈，你是谁</a></li>
+                <li><a href="">3.啊哈，你是谁</a></li>
+                <li><a href="">4.啊哈，你是谁</a></li>
+                <li><a href="">5.啊哈，你是谁</a></li>
+                <li><a href="">6.啊哈，你是谁</a></li>
+                <li><a href="">7.啊哈，你是谁</a></li>
+                <li><a href="">8.啊哈，你是谁</a></li>
+                <li><a href="">9.啊哈，你是谁</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--<i class="iconfont">&#xe62f;</i>-->
+<hr>
+<!--介绍-->
+<div class="introduce">
+    <!---------------------------------------------------->
+<ul class="introduce-ul">
+    <li><a href=""><i class="iconfont">&#xe62f;校区</i></a></li>
+    <li><a href=""><i class="iconfont">&#xe600;地址</i></a></li>
+    <li><a href=""><i class="iconfont">&#xf0070;咨询</i></a></li>
+    <li><a href=""><i class="iconfont">&#xe613;参观</i></a></li>
+    <li><a href=""><i class="iconfont">&#x3575;考察</i></a></li>
+    <li><a href=""><i class="iconfont">&#xe635;了解</i></a></li>
+</ul>
+    <!--------------------------图片展示区-->
+    <div>
+    <ul class="introduce-ul" id="introduce-ul">
+        <li>
+            1停车做爱枫林晚
+            <div class="li-bottom">
+                忽如一夜春风来
+            </div>
+            <div class="li-left">left</div>
+            <div class="li-right">right</div>
+        </li>
+        <li>
+            2想当年，小乔初嫁了
+            <div class="li-bottom">
+                使我不得开心颜
+            </div>
+            <div class="li-left">left</div>
+            <div class="li-right">right</div>
+        </li>
+        <li>
+            3垂死病中惊坐起
+            <div class="li-bottom">
+                无人知是荔枝来
+            </div>
+            <div class="li-left">left</div>
+            <div class="li-right">right</div>
+        </li>
+        <li>
+            4垂死病中惊坐起
+            <div class="li-bottom">
+               落花时节又逢君
+            </div>
+            <div class="li-left">left</div>
+            <div class="li-right">right</div>
+        </li>
+        <li>
+             5一骑红尘妃子笑
+            <div class="li-bottom">
+                垂死病中惊坐起
+            </div>
+            <div class="li-left">left</div>
+            <div class="li-right">right</div>
+        </li>
+        <li>
+            6一骑红尘妃子笑
+            <div class="li-bottom">
+               落花时节又逢君
+            </div>
+            <div class="li-left">left</div>
+            <div class="li-right">right</div>
+        </li>
+        <li>
+            7一骑红尘妃子笑
+            <div class="li-bottom">
+                无人知是荔枝来
+            </div>
+            <div class="li-left">left</div>
+            <div class="li-right">right</div>
+        </li>
+        <li>
+            1停车做爱枫林晚
+            <div class="li-bottom">
+                忽如一夜春风来
+            </div>
+            <div class="li-left">left</div>
+            <div class="li-right">right</div>
+        </li>
+    </ul>
+    </div>
+</div>
+<br>
+<!--建议-->
+<div class="advice">
+    <h3>推荐内容</h3>
+    <div class="button">
+        <button id="left"><</button>
+        <button id="right">></button>
+    </div>
+    <!--------------------------图片展示区-->
+    <div class="img-show" >
+        <ul id="img-show-ul">
+            <li class="odd" style="margin-left: 0">
+                <figure>
+                    <img src="../img/20160401103140632.jpg" alt="" title="htc">
+                    <figcaption> <a href="">c#</a></figcaption>
+                </figure>
+                <div>
+                    <h2>c#</h2>
+                    <p>C# 你或许会推迟和 C# 的约会，是因为她家名誉有问题。你就是我们的一员了，你听到了吧？你需要一个数据库？她哥哥 MSSQL 会钩住你。你需要一个住的地方？哎呀，她爸爸甚至可以给你在 Azure 大道上买套公寓。
+                    </p>
+                </div>
+            </li>
+            <li>
+                <figure>
+                    <img src="../img/20160308130953935.jpg" alt="" title="kfc">
+                    <figcaption> <a href="">c++</a></figcaption>
+                </figure>
+                <div>
+                    <h2>c++</h2>
+                    <p>是 Java 的表姐妹。和 Java 有很多共同点，不同的是，熙佳佳成长于更纯真的年代，她不相信要用“保护制度（protection）”。“保护制度”，我当然是在说自动内存管理。难道你以为我在说其他意思么？</p>
+
+                </div>
+            </li>
+            <li class="odd">
+                <figure>
+                    <img src="../img/20160401103048600.jpg" alt="" title="kff">
+                <figcaption><a href="">UI</a></figcaption>
+            </figure>
+                <div>
+                    <h2>UI</h2>
+                    <p>是 Java 的表姐妹。和 Java 有很多共同点，不同的是，熙佳佳成长于更纯真的年代，她不相信要用“保护制度（protection）”。“保护制度”，我当然是在说自动内存管理。难道你以为我在说其他意思么？</p>
+
+                </div>
+            </li>
+            <li>
+                <figure>
+                    <img src="../img/20160401103140632.jpg" alt="" title="good">
+                    <figcaption><a href="">html5</a></figcaption>
+                </figure>
+                <div>
+                    <h2>html5</h2>
+                    <p>超文本标记语言，所有网页都要使用它</p>
+                </div>
+
+            </li>
+            <li class="odd">
+                <figure>
+                    <img src="../img/20160524093313645.jpg" alt="" title="apple">
+                    <figcaption><a href="">java</a></figcaption>
+                </figure>
+                <div>
+                    <h2>java</h2>
+                    <p>嘉娃（Java） 是一位成功的职场女性。有些和她一起共事的人认为，之所以她可以在她那个岗位，虽然能力有所欠缺，但她给中层管理人员留下了好印象。或许你认为她是那种明智类型的，你应当和她一起定居。不过你要准备好在多年之中听不到“接口类型错误、遗漏分号”这样的絮叨。
+                    </p>
+
+                </div>
+              </li>
+            <li>
+                <figure>
+                    <img src="../img/20160624101308951.jpg" alt="" title="nokia">
+                    <figcaption><a href="">ios</a></figcaption>
+                </figure>
+                <div>
+                    <h2>ios</h2>
+                    <p>Objective- C 是 C 家庭的另一成员。她去一个奇特教堂回来后，就不和外面其他人约会了。
+                        Haskell, Clojure, Scheme 和她们的朋友都是一些爱时髦、有艺术气、聪明的妹纸。或许在多年前，你在学校就和她们一起度过了一个美好的夏天。她们是第一批让你觉得有挑战的妹纸。当然，尽管你总是自问“如果 … 将会怎么样”，但你或许从没有想要严肃对她。
+
+                       </p>
+
+                </div>
+
+            </li>
+            <li class="odd">
+                <figure>
+                    <img src="../img/20160401103140632.jpg" alt="">
+                    <figcaption><a href="">Python</a></figcaption>
+                </figure>
+                <div>
+                    <h2>Python</h2>
+                    <p>Python 是 Ruby 更为明智的姐姐。她优雅、漂亮、成熟。她或许是太完美了。大多数男人会喜欢说“哥们，你怎么会不喜欢 Python 呢！？”。是的，你是喜欢 Python。你是把当做了既不急躁也不很浪漫的 Ruby。（You just consider her the boring version of the edgy and romantic Ruby）
+                        </p>
+                </div>
+                </li>
+            <li>
+                <figure>
+                    <img src="../img/20160524093313645.jpg" alt="">
+                    <figcaption><a href="">VB</a></figcaption>
+                </figure>
+                <div>
+                    <h2>VB</h2>
+
+                </div>
+               </li>
+            <li class="odd">
+                <figure>
+                    <img src="../img/20160624101308951.jpg" alt="">
+                    <figcaption><a href="">js</a></figcaption>
+                </figure>
+                <div>
+                    <h2>js</h2>
+                    <p>Javascript - 嘿，这不就是那个拿下你初吻的妹纸么，甚至比 PHP 还早出现。我不知道她现在在做什么。听说她近几年事业飞黄腾达了。赶上时候，旧人也能焕发光彩……（你能看到她从头到脚穿着 jQuery 设计师设计的东西）……哇，有人变成白天鹅啦…… (*^__^*)
+                        </p>
+
+                </div>
+            </li>
+        </ul>
+    </div>
+
+</div>
+<br>
+
+<!--内容-->
+<div class="content">
+        <ul class="content-nav-ul">
+            <li class="javaee1"><a href="#java">javaee</a></li>
+            <li class="cjiajia1"><a href="#cjiajia">c++</a></li>
+            <li class="php1"><a href="#php">php</a></li>
+            <li class="pyon1"><a href="#pyon">pyon</a></li>
+            <li class="h51"><a href="#h5">h5</a></li>
+            <li class="ui1"><a href="#ui">ui</a></li>
+            <li class="ios1"><a href="#ios">ios</a></li>
+            <li><a href="">big-data</a></li>
+            <li><a href="">android</a></li>
+            <li><a href="">Internet+</a></li>
+
+        </ul>
+    <h3>传智播客课程中心</h3>
+    <div class="java" id="java">
+        <div class="java-img">
+            <h2>java-ee</h2>
+            <p>世界第一编程语言</p>
+            <p>我们的第一学科</p>
+            <img src="../img/imgg/java.png" alt="">
+        </div>
+        <a href="">
+            <img src="../img/imgg/icon1.png" alt="">
+            <span>课程介绍</span>
+            <div class="detail">
+                java is the beautiful program language!!!
+                java is the beautiful program language!!!
+            </div>
+        </a>
+        <a href="">
+            <img src="../img/imgg/icon2.png" alt="">
+            <span>师资介绍</span>
+            <div class="detail">
+               每逢佳节胖三斤，三斤过后又三斤
+            </div>
+        </a>
+        <a href="">
+            <img src="../img/imgg/icon3.png" alt="">
+            <span>学院介绍</span>
+            <div class="detail">
+               桃花潭水深千尺
+            </div>
+        </a>
+        <a href="">
+            <img src="../img/imgg/icon5.png" alt="">
+            <span>学员介绍</span>
+            <div class="detail">
+                不及老师套路深
+            </div>
+        </a>
+        <a href="">
+            <img src="../img/imgg/icon4_1.png" alt="">
+            <span>历史介绍</span>
+            <div class="detail">
+               一套之后又一套
+            </div>
+        </a>
+        <a href="">
+            <img src="../img/imgg/icon7.png" alt="">
+            <span>就业介绍</span>
+            <div class="detail">
+               登高望远，日照香炉生紫烟
+            </div>
+        </a>
+        <a href="">
+            <img src="../img/imgg/icon8.png" alt="">
+            <span>薪资介绍</span>
+            <div class="detail">
+               向来情深，奈何缘浅
+            </div>
+        </a>
+        <a href="">
+            <img src="../img/imgg/icon5.png" alt="">
+            <span>整体介绍</span>
+            <div class="detail">
+                最美不是下雨天，而是与你一起多雨的屋檐
+            </div>
+        </a>
+        <ul class="java-class-ul">
+            <li>南极
+                <div class="base-div">
+                <ul class="base-ul">
+                    <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                    <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                    <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                    <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                    <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                    <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                </ul>
+                <ul class="work-ul">
+                    <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                    <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                    <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                    <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                    <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                    <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                </ul>
+                </div>
+            </li>
+            <li>南经
+                <div class="base-div">
+                    <ul class="base-ul">
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                    </ul>
+                    <ul class="work-ul">
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                    </ul>
+                </div></li>
+            <li>南京
+                <div class="base-div">
+                    <ul class="base-ul">
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                    </ul>
+                    <ul class="work-ul">
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                    </ul>
+                </div></li>
+            <li>南方
+                <div class="base-div">
+                    <ul class="base-ul">
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                    </ul>
+                    <ul class="work-ul">
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                    </ul>
+                </div></li>
+            <li>南方
+                <div class="base-div">
+                    <ul class="base-ul">
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                    </ul>
+                    <ul class="work-ul">
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                    </ul>
+                </div></li>
+            <li>北极</li>
+            <li>南经</li>
+            <li>北京</li>
+            <li>北方</li>
+            <li>北方</li>
+
+        </ul>
+
+    </div>
+    <div class="cjiajia" id="cjiajia">
+        <div style="background: rgba(243,192,72,0.8)" class="java-img">
+            <h2>c++</h2>
+            <p>世界第一编程语言</p>
+            <p>我们的第一学科</p>
+            <img src="../img/imgg/c.png" alt="">
+        </div>
+        <a href="">
+            <img src="../img/imgg/icon1.png" alt="">
+            <span>课程介绍</span>
+            <div class="detail">
+                java is the beautiful program language!!!
+                java is the beautiful program language!!!
+            </div>
+        </a>
+        <a href="">
+            <img src="../img/imgg/icon2.png" alt="">
+            <span>师资介绍</span>
+            <div class="detail">
+                每逢佳节胖三斤，三斤过后又三斤
+            </div>
+        </a>
+        <a href="">
+            <img src="../img/imgg/icon3.png" alt="">
+            <span>学院介绍</span>
+            <div class="detail">
+                桃花潭水深千尺
+            </div>
+        </a>
+        <a href="">
+            <img src="../img/imgg/icon5.png" alt="">
+            <span>学员介绍</span>
+            <div class="detail">
+                不及老师套路深
+            </div>
+        </a>
+        <a href="">
+            <img src="../img/imgg/icon4_1.png" alt="">
+            <span>历史介绍</span>
+            <div class="detail">
+                一套之后又一套
+            </div>
+        </a>
+        <a href="">
+            <img src="../img/imgg/icon7.png" alt="">
+            <span>就业介绍</span>
+            <div class="detail">
+                登高望远，日照香炉生紫烟
+            </div>
+        </a>
+        <a href="">
+            <img src="../img/imgg/icon8.png" alt="">
+            <span>薪资介绍</span>
+            <div class="detail">
+                向来情深，奈何缘浅
+            </div>
+        </a>
+        <a href="">
+            <img src="../img/imgg/icon5.png" alt="">
+            <span>整体介绍</span>
+            <div class="detail">
+                最美不是下雨天，而是与你一起多雨的屋檐
+            </div>
+        </a>
+        <ul class="java-class-ul">
+            <li>南极
+                <div class="base-div">
+                    <ul class="base-ul">
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                    </ul>
+                    <ul class="work-ul">
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>南经
+                <div class="base-div">
+                    <ul class="base-ul">
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                    </ul>
+                    <ul class="work-ul">
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                    </ul>
+                </div></li>
+            <li>南京
+                <div class="base-div">
+                    <ul class="base-ul">
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                    </ul>
+                    <ul class="work-ul">
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                    </ul>
+                </div></li>
+            <li>南方
+                <div class="base-div">
+                    <ul class="base-ul">
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                    </ul>
+                    <ul class="work-ul">
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                    </ul>
+                </div></li>
+            <li>南方
+                <div class="base-div">
+                    <ul class="base-ul">
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                    </ul>
+                    <ul class="work-ul">
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                    </ul>
+                </div></li>
+            <li>北极</li>
+            <li>南经</li>
+            <li>北京</li>
+            <li>北方</li>
+            <li>北方</li>
+
+        </ul>
+
+    </div>
+    <div class="php" id="php">
+        <div style="background: rgba(39,184,105,0.8)" class="java-img">
+            <h2>php最美的语言</h2>
+            <p>世界第一编程语言</p>
+            <p>我们的第一学科</p>
+            <img src="../img/imgg/php.png" alt="">
+        </div>
+        <a href="">
+            <img src="../img/imgg/icon1.png" alt="">
+            <span>课程介绍</span>
+            <div class="detail">
+                java is the beautiful program language!!!
+                java is the beautiful program language!!!
+            </div>
+        </a>
+        <a href="">
+            <img src="../img/imgg/icon2.png" alt="">
+            <span>师资介绍</span>
+            <div class="detail">
+                每逢佳节胖三斤，三斤过后又三斤
+            </div>
+        </a>
+        <a href="">
+            <img src="../img/imgg/icon3.png" alt="">
+            <span>学院介绍</span>
+            <div class="detail">
+                桃花潭水深千尺
+            </div>
+        </a>
+        <a href="">
+            <img src="../img/imgg/icon5.png" alt="">
+            <span>学员介绍</span>
+            <div class="detail">
+                不及老师套路深
+            </div>
+        </a>
+        <a href="">
+            <img src="../img/imgg/icon4_1.png" alt="">
+            <span>历史介绍</span>
+            <div class="detail">
+                一套之后又一套
+            </div>
+        </a>
+        <a href="">
+            <img src="../img/imgg/icon7.png" alt="">
+            <span>就业介绍</span>
+            <div class="detail">
+                登高望远，日照香炉生紫烟
+            </div>
+        </a>
+        <a href="">
+            <img src="../img/imgg/icon8.png" alt="">
+            <span>薪资介绍</span>
+            <div class="detail">
+                向来情深，奈何缘浅
+            </div>
+        </a>
+        <a href="">
+            <img src="../img/imgg/icon5.png" alt="">
+            <span>整体介绍</span>
+            <div class="detail">
+                最美不是下雨天，而是与你一起多雨的屋檐
+            </div>
+        </a>
+        <ul class="java-class-ul">
+            <li>南极
+                <div class="base-div">
+                    <ul class="base-ul">
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                    </ul>
+                    <ul class="work-ul">
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>南经
+                <div class="base-div">
+                    <ul class="base-ul">
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                    </ul>
+                    <ul class="work-ul">
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                    </ul>
+                </div></li>
+            <li>南京
+                <div class="base-div">
+                    <ul class="base-ul">
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                    </ul>
+                    <ul class="work-ul">
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                    </ul>
+                </div></li>
+            <li>南方
+                <div class="base-div">
+                    <ul class="base-ul">
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                    </ul>
+                    <ul class="work-ul">
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                    </ul>
+                </div></li>
+            <li>南方
+                <div class="base-div">
+                    <ul class="base-ul">
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                    </ul>
+                    <ul class="work-ul">
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                    </ul>
+                </div></li>
+            <li>北极</li>
+            <li>南经</li>
+            <li>北京</li>
+            <li>北方</li>
+            <li>北方</li>
+
+        </ul>
+    </div>
+    <div class="pyon" id="pyon">
+        <div style="background: rgba(239,21,16,0.8)" class="java-img">
+            <h2>pyon最美的语言</h2>
+            <p>世界第一编程语言</p>
+            <p>我们的第一学科</p>
+            <img src="../img/imgg/python.png" alt="">
+        </div>
+        <a href="">
+            <img src="../img/imgg/icon1.png" alt="">
+            <span>课程介绍</span>
+            <div class="detail">
+                java is the beautiful program language!!!
+                java is the beautiful program language!!!
+            </div>
+        </a>
+        <a href="">
+            <img src="../img/imgg/icon2.png" alt="">
+            <span>师资介绍</span>
+            <div class="detail">
+                每逢佳节胖三斤，三斤过后又三斤
+            </div>
+        </a>
+        <a href="">
+            <img src="../img/imgg/icon3.png" alt="">
+            <span>学院介绍</span>
+            <div class="detail">
+                桃花潭水深千尺
+            </div>
+        </a>
+        <a href="">
+            <img src="../img/imgg/icon5.png" alt="">
+            <span>学员介绍</span>
+            <div class="detail">
+                不及老师套路深
+            </div>
+        </a>
+        <a href="">
+            <img src="../img/imgg/icon4_1.png" alt="">
+            <span>历史介绍</span>
+            <div class="detail">
+                一套之后又一套
+            </div>
+        </a>
+        <a href="">
+            <img src="../img/imgg/icon7.png" alt="">
+            <span>就业介绍</span>
+            <div class="detail">
+                登高望远，日照香炉生紫烟
+            </div>
+        </a>
+        <a href="">
+            <img src="../img/imgg/icon8.png" alt="">
+            <span>薪资介绍</span>
+            <div class="detail">
+                向来情深，奈何缘浅
+            </div>
+        </a>
+        <a href="">
+            <img src="../img/imgg/icon5.png" alt="">
+            <span>整体介绍</span>
+            <div class="detail">
+                最美不是下雨天，而是与你一起多雨的屋檐
+            </div>
+        </a>
+        <ul class="java-class-ul">
+            <li>南极
+                <div class="base-div">
+                    <ul class="base-ul">
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                    </ul>
+                    <ul class="work-ul">
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>南经
+                <div class="base-div">
+                    <ul class="base-ul">
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                    </ul>
+                    <ul class="work-ul">
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                    </ul>
+                </div></li>
+            <li>南京
+                <div class="base-div">
+                    <ul class="base-ul">
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                    </ul>
+                    <ul class="work-ul">
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                    </ul>
+                </div></li>
+            <li>南方
+                <div class="base-div">
+                    <ul class="base-ul">
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                    </ul>
+                    <ul class="work-ul">
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                    </ul>
+                </div></li>
+            <li>南方
+                <div class="base-div">
+                    <ul class="base-ul">
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                    </ul>
+                    <ul class="work-ul">
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                    </ul>
+                </div></li>
+            <li>北极</li>
+            <li>南经</li>
+            <li>北京</li>
+            <li>北方</li>
+            <li>北方</li>
+
+        </ul>
+    </div>
+    <div class="rock-div" id="ios">
+        <!-----------------------3D图片变换-->
+        <div class="con" id="con">
+            <div id="img-div1" class="img-div">
+                <img id="imgg1" src="../img/u=3649567160,108542336&fm=21&gp=0.jpg" alt="">
+                <div class="img-content">
+                    1落霞与孤鹜齐飞
+                    秋水共长天一色
+                </div>
+            </div>
+            <div id="img-div2" class="img-div">
+                <img id="imgg2" src="../img/dba396c04f4af37c829f1f57f6bcea42.gif" alt="">
+                <div class="img-content">
+                    2曾经沧海难为水
+                    除却巫山不是云
+                </div>
+            </div>
+            <div id="img-div3" class="img-div">
+                <img id="imgg3" src="../img/be5265e3541c4d469b43df0ef24b8009.gif" alt="">
+                <div class="img-content">
+                    3向来情深，奈何缘浅
+                </div>
+            </div>
+            <div id="img-div4" class="img-div">
+                <img id="imgg4" src="../img/3fcc0450bdb8c2e1b887c6365656dcf2.gif" alt="">
+                <div class="img-content">
+                    4溺水三千，独取一瓢
+                </div>
+            </div>
+            <div id="img-div5" class="img-div">
+                <img id="imgg5" src="../img/bbf038d0d32c002eb1afdfc0ad1d9b1d.png" alt="">
+                <div class="img-content">
+                    5倾我一生一世念，来如飞花散似烟
+                </div>
+            </div>
+            <div id="img-div6" class="img-div">
+                <img id="imgg6" src="../img/1ea189bf7ed08010f1ee1cd1ada0f668.gif" alt="">
+                <div class="img-content">
+                    6最是人间留不住，朱颜辞镜花辞树
+                </div>
+            </div>
+            <span id="next" class="right"> > </span>
+            <span id="prev" class="left"> < </span>
+
+        </div>
+        <!--ios标题-->
+        <h1><strong>i</strong><strong>o</strong><strong>s</strong></h1>
+        <!-----------------------火箭-->
+        <div class="con-div">
+            <img id="img1" src="../img/imgg/UC截图20160909142723.png" alt="">
+            <img id="img2" src="../img/imgg/UC截图20160909142758.png" alt="">
+            <img id="img3" src="../img/imgg/UC截图20160909142809.png" alt="">
+            <img id="img4" src="../img/imgg/UC截图20160909142828.png" alt="">
+            <img id="img5" src="../img/imgg/UC截图20160909142925.png" alt="">
+        </div>
+    </div>
+    <div class="h5" id="h5">
+        <div class="java-img">
+            <h2>h5最美的语言</h2>
+            <p>世界第一编程语言</p>
+            <p>我们的第一学科</p>
+            <img src="../img/imgg/web.png" alt="">
+        </div>
+        <a href="">
+            <img src="../img/imgg/icon1.png" alt="">
+            <span>课程介绍</span>
+            <div class="detail">
+                java is the beautiful program language!!!
+                java is the beautiful program language!!!
+            </div>
+        </a>
+        <a href="">
+            <img src="../img/imgg/icon2.png" alt="">
+            <span>师资介绍</span>
+            <div class="detail">
+                每逢佳节胖三斤，三斤过后又三斤
+            </div>
+        </a>
+        <a href="">
+            <img src="../img/imgg/icon3.png" alt="">
+            <span>学院介绍</span>
+            <div class="detail">
+                桃花潭水深千尺
+            </div>
+        </a>
+        <a href="">
+            <img src="../img/imgg/icon5.png" alt="">
+            <span>学员介绍</span>
+            <div class="detail">
+                不及老师套路深
+            </div>
+        </a>
+        <a href="">
+            <img src="../img/imgg/icon4_1.png" alt="">
+            <span>历史介绍</span>
+            <div class="detail">
+                一套之后又一套
+            </div>
+        </a>
+        <a href="">
+            <img src="../img/imgg/icon7.png" alt="">
+            <span>就业介绍</span>
+            <div class="detail">
+                登高望远，日照香炉生紫烟
+            </div>
+        </a>
+        <a href="">
+            <img src="../img/imgg/icon8.png" alt="">
+            <span>薪资介绍</span>
+            <div class="detail">
+                向来情深，奈何缘浅
+            </div>
+        </a>
+        <a href="">
+            <img src="../img/imgg/icon5.png" alt="">
+            <span>整体介绍</span>
+            <div class="detail">
+                最美不是下雨天，而是与你一起多雨的屋檐
+            </div>
+        </a>
+        <ul class="java-class-ul">
+            <li>南极
+                <div class="base-div">
+                    <ul class="base-ul">
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                    </ul>
+                    <ul class="work-ul">
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>南经
+                <div class="base-div">
+                    <ul class="base-ul">
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                    </ul>
+                    <ul class="work-ul">
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                    </ul>
+                </div></li>
+            <li>南京
+                <div class="base-div">
+                    <ul class="base-ul">
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                    </ul>
+                    <ul class="work-ul">
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                    </ul>
+                </div></li>
+            <li>南方
+                <div class="base-div">
+                    <ul class="base-ul">
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                    </ul>
+                    <ul class="work-ul">
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                    </ul>
+                </div></li>
+            <li>南方
+                <div class="base-div">
+                    <ul class="base-ul">
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                    </ul>
+                    <ul class="work-ul">
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                    </ul>
+                </div></li>
+            <li>北极</li>
+            <li>南经</li>
+            <li>北京</li>
+            <li>北方</li>
+            <li>北方</li>
+
+        </ul>
+    </div>
+    <div class="ui" id="ui">
+        <div style="background: rgba(224,44,79,0.5)" class="java-img">
+            <h2>ui最美的语言</h2>
+            <p>世界第一编程语言</p>
+            <p>我们的第一学科</p>
+            <img src="../img/imgg/ui.png" alt="">
+        </div>
+        <a href="">
+            <img src="../img/imgg/icon1.png" alt="">
+            <span>课程介绍</span>
+            <div class="detail">
+                java is the beautiful program language!!!
+                java is the beautiful program language!!!
+            </div>
+        </a>
+        <a href="">
+            <img src="../img/imgg/icon2.png" alt="">
+            <span>师资介绍</span>
+            <div class="detail">
+                每逢佳节胖三斤，三斤过后又三斤
+            </div>
+        </a>
+        <a href="">
+            <img src="../img/imgg/icon3.png" alt="">
+            <span>学院介绍</span>
+            <div class="detail">
+                桃花潭水深千尺
+            </div>
+        </a>
+        <a href="">
+            <img src="../img/imgg/icon5.png" alt="">
+            <span>学员介绍</span>
+            <div class="detail">
+                不及老师套路深
+            </div>
+        </a>
+        <a href="">
+            <img src="../img/imgg/icon4_1.png" alt="">
+            <span>历史介绍</span>
+            <div class="detail">
+                一套之后又一套
+            </div>
+        </a>
+        <a href="">
+            <img src="../img/imgg/icon7.png" alt="">
+            <span>就业介绍</span>
+            <div class="detail">
+                登高望远，日照香炉生紫烟
+            </div>
+        </a>
+        <a href="">
+            <img src="../img/imgg/icon8.png" alt="">
+            <span>薪资介绍</span>
+            <div class="detail">
+                向来情深，奈何缘浅
+            </div>
+        </a>
+        <a href="">
+            <img src="../img/imgg/icon5.png" alt="">
+            <span>整体介绍</span>
+            <div class="detail">
+                最美不是下雨天，而是与你一起多雨的屋檐
+            </div>
+        </a>
+        <ul class="java-class-ul">
+            <li>南极
+                <div class="base-div">
+                    <ul class="base-ul">
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                    </ul>
+                    <ul class="work-ul">
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>南经
+                <div class="base-div">
+                    <ul class="base-ul">
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                    </ul>
+                    <ul class="work-ul">
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                    </ul>
+                </div></li>
+            <li>南京
+                <div class="base-div">
+                    <ul class="base-ul">
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                    </ul>
+                    <ul class="work-ul">
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                    </ul>
+                </div></li>
+            <li>南方
+                <div class="base-div">
+                    <ul class="base-ul">
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                    </ul>
+                    <ul class="work-ul">
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                    </ul>
+                </div></li>
+            <li>南方
+                <div class="base-div">
+                    <ul class="base-ul">
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>基</strong><a href="">火爆开办110110</a></li>
+                    </ul>
+                    <ul class="work-ul">
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                        <li><strong>就</strong><a href="">火爆开办110110</a></li>
+                    </ul>
+                </div></li>
+            <li>北极</li>
+            <li>南经</li>
+            <li>北京</li>
+            <li>北方</li>
+            <li>北方</li>
+
+        </ul>
+    </div>
+    <!--<div class="big-data"></div>-->
+
+</div>
+<footer>
+    <img src="../img/footer.png" alt="">
+</footer>
+<!--fixed总是以body为定位对象的，按照浏览器的窗口进行定位。-->
+<div class="return-top">
+    <a href="#top-nav">
+        <img src="../img/ready.png" alt="">
+        <div>
+            <p>top</p>
+        </div>
+    </a>
+</div>
+
+
+</body>
+</html>
+<script>
+//    //-------------------------------------图片轮播
+//    var lis=document.getElementsByClassName('li');
+//    //---------------------------------------------------自动播放
+//    //    var dis=0;
+//    var distance1=0;
+//    var y=1;
+//    function moveimg1() {
+//        if(distance1<=-3884)
+//        {
+//            y=-1;
+//        }
+//        if(distance1==0)
+//        {
+//            y=1;
+//        }
+//        distance1=distance1-2*y;
+//        document.getElementById('img-con-ul').style.left=distance1+"px";
+//        $('.message-title').html(distance1);
+//        var x=parseInt(-distance1/971);
+//        for(var i=0;i<lis.length;i++)
+//        {
+//            if(i==x)
+//            {
+//                lis[x].style.backgroundColor='red';
+//            }
+//            else
+//            {
+//                lis[i].style.backgroundColor='#ffce33';
+//            }
+//        }
+//    }
+//    var t3=setInterval(moveimg1,20);
+//    //------------------------------------悬浮停止和点击切换
+//    //    var distance1=0;
+//    function left() {
+//        if(distance1<=-3884)
+//        {
+//            distance1=971;
+//        }
+//        if(distance1%971!=0)
+//        {
+//            //如 distance1=-1350  ----distance1=(350-500)+ -1350
+//            distance1=(-distance1%971-971)+distance1;
+//        }
+//        else { distance1=distance1-971;}
+//        document.getElementById('img-con-ul').style.left=distance1+'px';
+//        $('.message-title').html(distance1);
+//        var x=parseInt(-distance1/971);
+//        for(var i=0;i<lis.length;i++)
+//        {
+//            if(i==x)
+//            {
+//                lis[x].style.backgroundColor='red';
+//            }
+//            else
+//            {
+//                lis[i].style.backgroundColor='#ffce33';
+//            }
+//        }
+//    }
+//    document.getElementById('img-con-left').onclick=function () {
+//        clearInterval(t3);
+//        left();
+//    }
+//
+//    function right() {
+//        if(distance1>=0)
+//        {
+//            distance1=-3884;
+//        }
+//        if(distance1%971!=0)
+//        {
+//            //如 distance1=-1350  ----distance1=(350)+ -1350
+//            distance1=(-distance1%971)+distance1;
+//        }
+//        else { distance1=distance1+971;}
+//        document.getElementById('img-con-ul').style.left=distance1+'px';
+//        $('.message-title').html(distance1);
+//        var x=parseInt(-distance1/971);
+//        for(var i=0;i<lis.length;i++)
+//        {
+//            if(i==x)
+//            {
+//                lis[x].style.backgroundColor='red';
+//            }
+//            else
+//            {
+//                lis[i].style.backgroundColor='#ffce33';
+//            }
+//        }
+//    }
+//    document.getElementById('img-con-right').onclick=function () {
+//        clearInterval(t3);
+//        right();
+//    }
+//    document.getElementById('img-con').onmouseover=function () {
+//        clearInterval(t3);
+//    }
+//    document.getElementById('img-con').onmouseout=function () {
+//        t3=setInterval(moveimg1,20);
+//    }
+//    //----------------------------------------------------------悬浮列表出现相应图片
+//    var num=0;
+//    $(".list > li").click(function () {
+//        $(this).css("color",'white').css("background",'red');//this 是当前选择的元素
+//        num=parseInt((this.id).charAt(4));//this.id 是当前选择的元素的 id
+//        distance1=(-num+1)*971;
+//        document.getElementById('img-con-ul').style.left=distance1+'px';
+//        $('.message-title').html(distance1);
+//    });
+//    $(".list > li").hover(
+//            function () {
+//                $(this).css("color", 'red').css("background", 'green');//this 是当前选择的元素
+//            },
+//            function () {
+//                $(this).css("color", 'yellow').css("background", 'blue');//this 是当前选择的元素
+//            }
+//    );
+
+</script>
+<script>
+//    //---------------------============================信息定时移动
+//    function getid(id) {
+//        return document.getElementById(id);
+//    }
+//    var index=0;
+//    function move() {
+//        if(index<=-500){
+//            index=0;
+//        }
+//        index=index-3;
+//        document.getElementById('message-banner').style.top=index+"px";
+//    }
+//    var t=setInterval(move,300);
+//    getid("message-banner").onmouseover=function () {
+//        clearInterval(t);
+//    }
+//    getid("message-banner").onmouseout=function () {
+//        t= setInterval(move, 300);
+//    }
+//    //-------------------------------------------- 定时移动图片
+//    var flag=1;//--------------标志
+//    var distance=0; //----------距离
+//    function moveul() {
+//        if (distance <=-965) {
+//            flag=-1;
+//        }
+//        if (distance >=0) {
+//            flag=1;
+//        }
+//        distance = distance - 3*flag;
+//        document.getElementById('introduce-ul').style.left = distance + "px";
+//    }
+//    var t1=setInterval(moveul,50);
+//
+//    getid("introduce-ul").onmouseover=function () {
+//        clearInterval(t1);
+//    }
+//    getid("introduce-ul").onmouseout=function () {
+//        t1 = setInterval(moveul, 70);
+//    }
+</script>
+<script>
+//    //------------------------------------------图片定时移动
+//    var inde=0;
+//    var z=1;
+//    function moveimg() {
+//        if(inde==-1000){
+//            z=-1;
+//        }
+//        if(inde==0){
+//            z=1;
+//        }
+//        inde=inde-2*z;
+//        document.getElementById('img-show-ul').style.left=inde+"px";
+//    }
+//    var t2=setInterval(moveimg,50);
+//
+//    $("#img-show-ul").mouseover(function () {
+//        clearInterval(t2);
+//    });
+//    $("#img-show-ul").mouseout(function () {
+//        t2=setInterval(moveimg,50);
+//    });
+//
+//    //----------------------------------------------jq控制导航条
+//    $(".content").mouseover(function () {
+//        $(".content-nav-ul").css("height","50px")
+//    });
+//    $(".content").mouseout(function () {
+//        $(".content-nav-ul").css("height","0px")
+//    });
+//    //---------------------------------------
+//    $(".content .java").mouseover(function () {
+//        $(".content-nav-ul .javaee1").css("background","rgba(132,255,123,0.8)")
+//    });
+//    $(".content .java").mouseout(function () {
+//        $(".content-nav-ul .javaee1").css("background","")
+//    });
+//    //------------------------------------------
+//    $(".content .cjiajia").mouseover(function () {
+//        $(".content-nav-ul .cjiajia1").css("background","rgba(241,204,101,0.8)")
+//    });
+//    $(".content .cjiajia").mouseout(function () {
+//        $(".content-nav-ul .cjiajia1").css("background","")
+//    });
+//    //--------------------------------
+//    $(".content .php").mouseover(function () {
+//        $(".content-nav-ul .php1").css("background","rgba(78,198,128,0.8)")
+//    });
+//    $(".content .php").mouseout(function () {
+//        $(".content-nav-ul .php1").css("background","")
+//    });
+//    //-------------------------------------------------
+//    $(".content .pyon").mouseover(function () {
+//        $(".content-nav-ul .pyon1").css("background","rgba(239,21,16,0.7)")
+//    });
+//    $(".content .pyon").mouseout(function () {
+//        $(".content-nav-ul .pyon1").css("background","")
+//    });
+//    //-------------------------------------------------
+//    $(".content .h5").mouseover(function () {
+//        $(".content-nav-ul .h51").css("background","rgba(132,255,123,0.8)")
+//    });
+//    $(".content .h5").mouseout(function () {
+//        $(".content-nav-ul .h51").css("background","")
+//    });
+//    //-------------------------------------------------
+//    $(".content .ui").mouseover(function () {
+//        $(".content-nav-ul .ui1").css("background","rgba(231,150,151,0.8)")
+//    });
+//    $(".content .ui").mouseout(function () {
+//        $(".content-nav-ul .ui1").css("background","")
+//    });
+//    //----------------------------------------------------
+//    $(".content .rock-div").mouseover(function () {
+//        $(".content-nav-ul .ios1").css("background","rgba(234,219,91,1)")
+//    });
+//    $(".content .rock-div").mouseout(function () {
+//        $(".content-nav-ul .ios1").css("background","")
+//    });
+
+</script>
+<script>
+    function drop() {
+        var arr_city=new Array();
+        arr_city[0]=new Array(new Option("--请选择区--",'jjl'));
+        arr_city[1]=new Array(new Option("芝罘区",'zfq'),new Option("莱山区",'lsq'),new Option("高新区",'gxq'));
+        arr_city[2]=new Array(new Option("台北101大楼",'wdq'),new Option("上海金茂大厦",'hcq'),new Option("上海寰球金融中心"),new Option("苏州大裤衩"));
+        arr_city[3]=new Array(new Option("日月潭",'wdq'),new Option("嘉义",'hcq'),new Option("九把刀"),new Option("环翠区"));
+        var index8=document.getElementById('s2').selectedIndex;
+//        document.getElementById('p').innerHTML=index8;//2
+        for (var i=0;i<arr_city[index8].length;i++)//arr_city[index].length实质是一个数组的长度
+        {
+            document.getElementById('s1').options[i]=arr_city[index8][i];//根据选择的索引循环赋值
+            //options=数组中的第几个option
+        }
+    }
+</script>
+<script>
+//    $('.java-class-ul > li').mouseover(function () {
+//        $(this).find('.base-div').css('height','60px');
+//        $(!this).find('.base-div').hide();
+//    });
+//    $('.java-class-ul > li').mouseout(function () {
+//        $(!this).find('.base-div').hide();
+//    });
+</script>

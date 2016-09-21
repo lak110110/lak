@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+    <script src="../../jquery/jquery-3.0.0.min.js"></script>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .img-con{
+            height: 300px;
+            width: 500px;
+            background-color: pink;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .img-con ul{
+            height: 100%;
+            width: 2500px;
+            position: relative;
+        }
+        .img-con ul li{
+            height: 100%;
+            width: 500px;
+            list-style: none;
+            float: left;
+        }
+        .img-con ul li img{
+            width: 100%;
+            height: 100%;
+            transition: all 2s;
+        }
+        /*------------------------------*/
+        .img-con .img-con-left,.img-con .img-con-right{
+            position: absolute;
+            height: 100%;
+            width: 50px;
+            background-color: rgba(255, 232, 132, 0.2);
+            top: 0;
+            line-height: 300px;
+            text-align: center;
+            font-size: 40px;
+        }
+        .img-con .img-con-left{
+            left: 0;
+        }
+        .img-con .img-con-right{
+            right: 0;
+        }
+        .img-con:hover .img-con-left, .img-con:hover .img-con-right{
+            background-color: rgba(255, 232, 132, 0.5);
+        }
+        /*-------------------------------------------------------------*/
+        .img-con .list{
+            height: 40px;
+            width: 200px;
+            position: absolute;
+            bottom: 20px;
+           left: 200px;
+        }
+        .img-con .list li{
+            height: 40px;
+            width: 40px;
+            float: left;
+            list-style: none;
+            background-color: pink;
+            line-height: 40px;
+            text-align: center;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+<div class="img-con" id="img-con">
+    <ul id="img-con-ul">
+        <li id="ul-li1"><img src="../img/1.jpg" alt=""></li>
+        <li id="ul-li2"><img src="../img/2.jpg" alt=""></li>
+        <li id="ul-li3"><img src="../img/3.jpg" alt=""></li>
+        <li id="ul-li4"><img src="../img/4.jpg" alt=""></li>
+        <li id="ul-li5"><img src="../img/5.jpg" alt=""></li>
+    </ul>
+    <div class="img-con-left" id="img-con-left"><</div>
+    <div class="img-con-right" id="img-con-right">></div>
+    <div class="list">
+        <li class="li" id="list1">1</li>
+        <li class="li" id="list2">2</li>
+        <li class="li" id="list3">3</li>
+        <li class="li" id="list4">4</li>
+        <li class="li" id="list5">5</li>
+    </div>
+</div>
+<span>vvvvv</span>
+</body>
+</html>
+<script>
+    var lis=document.getElementsByClassName('li');
+    //---------------------------------------------------自动播放
+//    var dis=0;
+    var distance1=0;
+    var y=1;
+    function moveimg() {
+        if(distance1==-2000)
+        {
+            y=-1;
+        }
+        if(distance1==0)
+        {
+            y=1;
+        }
+        distance1=distance1-2*y;
+        document.getElementById('img-con-ul').style.left=distance1+"px";
+        $('span').html(distance1);
+        var x=parseInt(-distance1/500);
+        for(var i=0;i<lis.length;i++)
+        {
+            if(i==x)
+            {
+                lis[x].style.backgroundColor='red';
+            }
+            else
+            {
+                lis[i].style.backgroundColor='#ffce33';
+            }
+        }
+    }
+    var t=setInterval(moveimg,20);
+    //------------------------------------悬浮停止和点击切换
+//    var distance1=0;
+    function left() {
+        if(distance1==-2000)
+        {
+            distance1=500;
+        }
+        if(distance1%500!=0)
+        {
+            //如 distance1=-1350  ----distance1=(350-500)+ -1350
+            distance1=(-distance1%500-500)+distance1;
+        }
+        else { distance1=distance1-500;}
+
+        document.getElementById('img-con-ul').style.left=distance1+'px';
+        $('span').html(distance1);
+        var x=parseInt(-distance1/500);
+        for(var i=0;i<lis.length;i++)
+        {
+            if(i==x)
+            {
+                lis[x].style.backgroundColor='red';
+            }
+            else
+            {
+                lis[i].style.backgroundColor='#ffce33';
+            }
+        }
+    }
+    document.getElementById('img-con-left').onclick=function () {
+        clearInterval(t);
+        left();
+    }
+
+    function right() {
+        if(distance1==0)
+        {
+            distance1=-2000;
+        }
+        if(distance1%500!=0)
+        {
+            //如 distance1=-1350  ----distance1=(350)+ -1350
+            distance1=(-distance1%500)+distance1;
+        }
+        else { distance1=distance1+500;}
+      document.getElementById('img-con-ul').style.left=distance1+'px';
+        $('span').html(distance1);
+        var x=parseInt(-distance1/500);
+        for(var i=0;i<lis.length;i++)
+        {
+            if(i==x)
+            {
+                lis[x].style.backgroundColor='red';
+            }
+            else
+            {
+                lis[i].style.backgroundColor='#ffce33';
+            }
+        }
+    }
+    document.getElementById('img-con-right').onclick=function () {
+        clearInterval(t);
+        right();
+    }
+    document.getElementById('img-con').onmouseover=function () {
+        clearInterval(t);
+    }
+    document.getElementById('img-con').onmouseout=function () {
+        t=setInterval(moveimg,20);
+    }
+    //----------------------------------------------------------悬浮列表出现相应图片
+    var num=0;
+    $(".list > li").click(function () {
+        $(this).css("color",'white').css("background",'red');//this 是当前选择的元素
+        num=parseInt((this.id).charAt(4));//this.id 是当前选择的元素的 id
+        distance1=(-num+1)*500;
+        document.getElementById('img-con-ul').style.left=distance1+'px';
+    });
+    $(".list > li").hover(
+            function () {
+        $(this).css("color", 'red').css("background", 'green');//this 是当前选择的元素
+                   },
+            function () {
+                $(this).css("color", 'yellow').css("background", 'blue');//this 是当前选择的元素
+            }
+    );
+
+</script>

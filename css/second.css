@@ -1,0 +1,80 @@
+@charset "utf-8";
+.con{
+    background-color: rgb(81,192,255);
+   float: left;
+    height: 400px;
+    width: 400px;
+    position: relative;
+    perspective: 4000px;/*视距。眼镜离屏幕的距离*/
+    perspective-origin: 50% 50%;/*观视点*/
+    webkit-transform-style: preserve-3d;/*告诉浏览器此区域 变换的方式为3*/
+}
+.con span{
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    position: absolute;
+    bottom: 0px;
+    background-color: rgba(81,192,255, 0.5);
+    font-size: 35px;
+    font-weight: bolder;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px black;
+    bottom: 5px;
+    color: white;
+}
+.con:hover span{
+    background-color: rgba(31, 129, 255, 0.8);
+}
+.con .right{
+    right: 0px;
+}
+.con .left{
+    left: 0px;
+}
+
+.con img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+.con .img-div{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: all 2s;
+    /*-webkit-transform-origin:bottom ;!*绕X轴的底部旋转*!*/
+    box-shadow: 5px 5px 20px #131313;
+}
+.con .img-div .img-content{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border-radius: 50%;
+    top: 100%;
+    left: 0;
+    line-height: 400px;
+    text-align: center;
+    background-color: rgba(255, 244, 138, 0.46);
+    font-family: 华文行楷;
+    font-size: 20px;
+}
+.con .img-div:hover .img-content{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border-radius: 50%;
+    top: 0px;
+    left: 0;
+    transition: all 2s;
+    transform: rotateZ(360deg);
+    color: red;
+    font-size: 25px;
+}
+#img-div2, #img-div3, #img-div4, #img-div5, #img-div6{
+    transform: rotateX(90deg);
+}
