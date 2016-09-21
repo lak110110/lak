@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>效果</title>
+    <script src="../jquery/jquery-3.0.0.min.js"></script>
+
+    <style>
+        div{
+            height: 300px;
+            width: 300px;
+            background-color: red;
+            position: relative;
+        }
+        li{
+            background-color: yellow;
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+<button>hidden</button>
+<button>show</button>
+<button>fadein</button>
+<button>fadeout</button>
+<button>fadetoggle</button>
+<button>fadetoAUTO</button>
+<button>fadetohandle</button>
+<button>animation</button>
+<button>stop</button>
+<div>
+    <ul>
+        <li>555</li>
+        <li>555</li>
+        <li>555</li>
+        <li>555</li>
+    </ul>
+</div>
+
+</body>
+</html>
+<script>
+    //-----------------------------------------
+//    $('button').eq(0).click(function () {
+//        $('div').hide(1000);
+//    });
+//    $('button').eq(1).click(function () {
+//        $('div').show(1000);
+//    });
+//------------------------------------
+//    $('button').eq(0).click(function () {
+//        $('ul').hide(1000);
+//    });
+//   $('button').eq(1).click(function () {
+//        $('ul').show(1000);
+//    });
+    //--------------------------------------点一下隐藏一个
+var i=0;
+//$('button').eq(0).click(function () {
+//        $('ul li').eq(i).hide(1000);
+//        i++;
+//});
+//$('button').eq(1).click(function () {
+//    i--;
+//    $('ul li').eq(i).show(1000);
+//});
+    //---------------------老师的方法
+    $('button').eq(0).click(function () {
+        $('ul li').not(':hidden').first().hide(1000);
+    });
+    $('button').eq(1).click(function () {
+        $('ul li:hidden').first().show(1000);
+    });
+
+    //--------------------------------------点一下一个接一个隐藏
+//    var i=0
+//$('button').eq(0).click(function () {
+//        $('ul li').eq(i).hide(1000,function lak() {
+//                i++;
+//            $('ul li').eq(i).hide(1000);
+//            if(i==3)
+//            {
+//                clearTimeout(t);
+//            }
+//            var t=setTimeout(lak,1000)
+//        });
+//});
+//$('button').eq(1).click(function () {
+////    debugger
+//    $('ul li').eq(i).show(1000,function lak() {
+//        i--;
+//        $('ul li').eq(i).show(1000);
+//        if(i==0)
+//        {
+//            clearTimeout(t1)
+//        }
+//        var t1=setTimeout(lak,1000)
+//    });
+//});
+
+    //-----------老师的方法
+//    $('button').eq(0).click(function () {
+//            $('ul li').eq(0).hide(1000,function () {
+//                $(this).next().hide(1000,arguments.callee);//arguments.callee 调用当前执行的函数，也是本身函数
+//            });
+//    });
+//    $('button').eq(1).click(function () {
+//            $('ul li').eq(0).show(1000,function () {//<-----当前执行的函数
+//                $(this).next().show(1000,arguments.callee);//arguments.callee 调用当前执行的函数，也是本身函数
+//            });
+//    });
+    //##################################################动画效果
+    $('button').eq(2).click(function () {
+                $('ul li').fadeIn(2000);
+        });
+    $('button').eq(3).click(function () {
+                $('ul li').fadeOut(2000);
+        });
+    $('button').eq(4).click(function () {
+                $('ul li').fadeToggle(2000);
+        });
+    //--------------------------------修改透明度，一个地一个修改
+    $('button').eq(5).click(function () {//自动
+        $('ul li').eq(0).fadeTo(1000,0.3,function () {
+            $(this).next().fadeTo(1000,0.5,arguments.callee);
+        });
+    });
+    $('button').eq(6).click(function () {
+            $('ul li').eq(i).fadeTo(1000,0.3);
+            i++;
+    });
+    //-------------------------动画animation
+    $('button').eq(7).click(function () {
+        $('div').animate({width:"-=50px",height:"-=20px"},{queue:true},2000);//默认true动画按顺序执行
+        $('div').animate({left:"+=200px"},{queue:true},2000);//false动画同时执行
+
+    });
+    $('button').eq(8).click(function () {
+//        $('div').clearQueue();//只写clearQueue()表示结束当前动画,后面的动画不执行了
+        $('div').stop();//停止当前执行的动画，继续执行后面的动画
+    });
+
+
+
+</script>
