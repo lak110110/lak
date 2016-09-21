@@ -2,145 +2,101 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>效果</title>
-    <script src="../jquery/jquery-3.0.0.min.js"></script>
-
+    <title>lak</title>
+    <script src="../js/jquery-3.0.0.min.js"></script>
     <style>
         div{
-            height: 300px;
-            width: 300px;
+            height: 100px;
+            width: 100px;
             background-color: red;
-            position: relative;
         }
-        li{
-            background-color: yellow;
-            margin-top: 10px;
+        .d{
+            background-color: #ffc863;
         }
 
     </style>
 </head>
 <body>
-<button>hidden</button>
-<button>show</button>
-<button>fadein</button>
-<button>fadeout</button>
-<button>fadetoggle</button>
-<button>fadetoAUTO</button>
-<button>fadetohandle</button>
-<button>animation</button>
-<button>stop</button>
-<div>
-    <ul>
-        <li>555</li>
-        <li>555</li>
-        <li>555</li>
-        <li>555</li>
-    </ul>
-</div>
-
+<div id="div" class="d"></div>
+<ul>
+    <li>2</li>
+    <li>3</li>
+    <li>2</li>
+    <li>5</li>
+    <li>4</li>
+    <li>5</li>
+    <li>2</li>
+    <li>7</li>
+    <li></li>
+    <li></li>
+    <li>7jj</li>
+    <li>8</li>
+    <li>2jj</li>
+</ul>
+<ul>
+    <li>2</li>
+    <li>3</li>
+    <li>2</li>
+    <li style="display: none">5</li>
+    <li style="display: none">5</li>
+    <li style="display: none">5</li>
+    <li></li>
+    <li></li>
+    <li>2</li>
+    <li>7</li>
+    <li>8</li>
+    <li>2</li>
+</ul>
+<p id="p">fffffffffffffffffffffffffffffffffffffffff</p>
+<!--<button>nn</button>-->
+<script>ffffffffggggggggg</script>
 </body>
 </html>
 <script>
-    //-----------------------------------------
-//    $('button').eq(0).click(function () {
-//        $('div').hide(1000);
-//    });
-//    $('button').eq(1).click(function () {
-//        $('div').show(1000);
-//    });
-//------------------------------------
-//    $('button').eq(0).click(function () {
-//        $('ul').hide(1000);
-//    });
-//   $('button').eq(1).click(function () {
-//        $('ul').show(1000);
-//    });
-    //--------------------------------------点一下隐藏一个
-var i=0;
-//$('button').eq(0).click(function () {
-//        $('ul li').eq(i).hide(1000);
-//        i++;
-//});
-//$('button').eq(1).click(function () {
-//    i--;
-//    $('ul li').eq(i).show(1000);
-//});
-    //---------------------老师的方法
-    $('button').eq(0).click(function () {
-        $('ul li').not(':hidden').first().hide(1000);
-    });
-    $('button').eq(1).click(function () {
-        $('ul li:hidden').first().show(1000);
-    });
-
-    //--------------------------------------点一下一个接一个隐藏
-//    var i=0
-//$('button').eq(0).click(function () {
-//        $('ul li').eq(i).hide(1000,function lak() {
-//                i++;
-//            $('ul li').eq(i).hide(1000);
-//            if(i==3)
-//            {
-//                clearTimeout(t);
-//            }
-//            var t=setTimeout(lak,1000)
-//        });
-//});
-//$('button').eq(1).click(function () {
-////    debugger
-//    $('ul li').eq(i).show(1000,function lak() {
-//        i--;
-//        $('ul li').eq(i).show(1000);
-//        if(i==0)
-//        {
-//            clearTimeout(t1)
-//        }
-//        var t1=setTimeout(lak,1000)
-//    });
-//});
-
-    //-----------老师的方法
-//    $('button').eq(0).click(function () {
-//            $('ul li').eq(0).hide(1000,function () {
-//                $(this).next().hide(1000,arguments.callee);//arguments.callee 调用当前执行的函数，也是本身函数
-//            });
-//    });
-//    $('button').eq(1).click(function () {
-//            $('ul li').eq(0).show(1000,function () {//<-----当前执行的函数
-//                $(this).next().show(1000,arguments.callee);//arguments.callee 调用当前执行的函数，也是本身函数
-//            });
-//    });
-    //##################################################动画效果
-    $('button').eq(2).click(function () {
-                $('ul li').fadeIn(2000);
+    $("#div").click(function () {
+        $("#div:animated").toggleClass("d");//添加一个类
+    })
+    function lak() {
+        $("#div").slideToggle(1000,"linear");
+    }
+//    setInterval(lak,1000)
+    $(function () {
+        $("ul li:eq(3)").css({"color":"red"})//eq(2)索引值，正负都可以，负数索引是-1开始
+//-----------------------------------------
+        //css({"":"","":""})花括号相当于对象
+        $("#div").click(function () {
+            $(this).css({
+                width:function (index,value) {
+//                    document.write(index);//获取当前的索引
+//                    document.write(value);//获取当前的 宽度
+                   return parseInt(value)*1.2;
+                },
+                height:function (index,value) {
+                    return parseInt(value)*1.5;
+                }
+            });
         });
-    $('button').eq(3).click(function () {
-                $('ul li').fadeOut(2000);
+        //---------------------------------
+        $("ul").each(function () {
+            $(this).find("li:eq(0)").css("color","red");//遍历索引从0开始
         });
-    $('button').eq(4).click(function () {
-                $('ul li').fadeToggle(2000);
+        $("ul").each(function () {
+            $(this).find("li:empty").text("xoxoxoxo").css("color","yellow");//过滤空的标签
         });
-    //--------------------------------修改透明度，一个地一个修改
-    $('button').eq(5).click(function () {//自动
-        $('ul li').eq(0).fadeTo(1000,0.3,function () {
-            $(this).next().fadeTo(1000,0.5,arguments.callee);
-        });
-    });
-    $('button').eq(6).click(function () {
-            $('ul li').eq(i).fadeTo(1000,0.3);
-            i++;
-    });
-    //-------------------------动画animation
-    $('button').eq(7).click(function () {
-        $('div').animate({width:"-=50px",height:"-=20px"},{queue:true},2000);//默认true动画按顺序执行
-        $('div').animate({left:"+=200px"},{queue:true},2000);//false动画同时执行
+
+            $("ul li:nth-child(even)").css("color","green");//索引从1开始 odd偶数，even奇数
+        //-----------------------------------过滤空的标签
+//        $("ul li:empty").text("lak").css("color","red");
+        $("ul li:empty").text("lak").css("color","red").fadeTo(5000,0.5);
+//        $("li:parent").css("background","green").fadeTo(3000,0.5);//有子元素的标签-----时间，透明度
+        //-------------------------------
+        $("ul:has(p)").text("lak").css("color","red").fadeTo(5000,0.5);//ul中所有的p标签都会应用，相当于css中的后代选择器
+       //-----------------------寻找隐藏的元素的个数
+//        var x=$("li:hidden").length;
+//        var x=$("body").find(":hidden");//把body内外的script标签也都选择出来
+//        $("#p").html(x.css("display","block"));
+//--------------------------------------------------
+//        $("ul").get().reverse();
 
     });
-    $('button').eq(8).click(function () {
-//        $('div').clearQueue();//只写clearQueue()表示结束当前动画,后面的动画不执行了
-        $('div').stop();//停止当前执行的动画，继续执行后面的动画
-    });
-
-
-
 </script>
