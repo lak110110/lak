@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lak</title>
+    <script src="../js/jquery-3.0.0.min.js"></script>
+    <style>
+        div{
+            height: 100px;
+            width: 100px;
+            background-color: red;
+        }
+        .d{
+            background-color: #ffc863;
+        }
+
+    </style>
+</head>
+<body>
+<div id="div" class="d"></div>
+<ul>
+    <li>2</li>
+    <li>3</li>
+    <li>2</li>
+    <li>5</li>
+    <li>4</li>
+    <li>5</li>
+    <li>2</li>
+    <li>7</li>
+    <li></li>
+    <li></li>
+    <li>7jj</li>
+    <li>8</li>
+    <li>2jj</li>
+</ul>
+<ul>
+    <li>2</li>
+    <li>3</li>
+    <li>2</li>
+    <li style="display: none">5</li>
+    <li style="display: none">5</li>
+    <li style="display: none">5</li>
+    <li></li>
+    <li></li>
+    <li>2</li>
+    <li>7</li>
+    <li>8</li>
+    <li>2</li>
+</ul>
+<p id="p">fffffffffffffffffffffffffffffffffffffffff</p>
+<!--<button>nn</button>-->
+<script>ffffffffggggggggg</script>
+</body>
+</html>
+<script>
+    $("#div").click(function () {
+        $("#div:animated").toggleClass("d");//添加一个类
+    })
+    function lak() {
+        $("#div").slideToggle(1000,"linear");
+    }
+//    setInterval(lak,1000)
+    $(function () {
+        $("ul li:eq(3)").css({"color":"red"})//eq(2)索引值，正负都可以，负数索引是-1开始
+//-----------------------------------------
+        //css({"":"","":""})花括号相当于对象
+        $("#div").click(function () {
+            $(this).css({
+                width:function (index,value) {
+//                    document.write(index);//获取当前的索引
+//                    document.write(value);//获取当前的 宽度
+                   return parseInt(value)*1.2;
+                },
+                height:function (index,value) {
+                    return parseInt(value)*1.5;
+                }
+            });
+        });
+        //---------------------------------
+        $("ul").each(function () {
+            $(this).find("li:eq(0)").css("color","red");//遍历索引从0开始
+        });
+        $("ul").each(function () {
+            $(this).find("li:empty").text("xoxoxoxo").css("color","yellow");//过滤空的标签
+        });
+
+            $("ul li:nth-child(even)").css("color","green");//索引从1开始 odd偶数，even奇数
+        //-----------------------------------过滤空的标签
+//        $("ul li:empty").text("lak").css("color","red");
+        $("ul li:empty").text("lak").css("color","red").fadeTo(5000,0.5);
+//        $("li:parent").css("background","green").fadeTo(3000,0.5);//有子元素的标签-----时间，透明度
+        //-------------------------------
+        $("ul:has(p)").text("lak").css("color","red").fadeTo(5000,0.5);//ul中所有的p标签都会应用，相当于css中的后代选择器
+       //-----------------------寻找隐藏的元素的个数
+//        var x=$("li:hidden").length;
+//        var x=$("body").find(":hidden");//把body内外的script标签也都选择出来
+//        $("#p").html(x.css("display","block"));
+//--------------------------------------------------
+//        $("ul").get().reverse();
+
+    });
+</script>
