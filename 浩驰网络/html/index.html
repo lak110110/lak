@@ -42,171 +42,149 @@
     </nav>
 </header>
 <!---------------------img-->
+
 <style>
-   .carousel-inner{
-       height: 450px;
-   }
-   .item img{
-       height: 100%;
-   }
-</style>
-<div id="carousel-example" data-interval="2000" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
-        <div class="item">
-            <img src="../img/20150605103620633.jpg">
-        </div>
-        <div class="item">
-            <img src="../img/20150603154538836.jpg">
-        </div>
-        <div class="item active">
-            <img src="../img/20150529160535715.jpg">
-        </div>
+    .father{
+        width: 100%;
+        height: 400px;
+    }
+    .con{
+        height: 400px;
+        width: 400px;
+        margin: 200px auto;
+        /*background-color: red;*/
+        position: relative;
+        animation: my 30s 15;
+
+        perspective: 2000000px;
+        perspective-origin: 50% 50%;
+        transform-style: preserve-3d;
+    }
+    /*--------------------------*/
+    .son{
+        height: 200px;
+        width: 200px;
+        /*background-color: #5cff3b;*/
+        position: absolute;
+        top: 100px;
+        left: 100px;
+        /*transform: rotateX(35deg);*/
+        animation: my 15s 15;
+
+        perspective: 2000000px;
+        perspective-origin: 50% 50%;
+        transform-style: preserve-3d;
+    }
+    @keyframes my {
+        /*如果你要沿着该轴转动那就将该轴的值设置为1，否则为0；然后在后面的angle中设置旋转的角度，需要注意的是，angle只有一个角度值。*/
+        0%{
+            transform: rotate3d(1, 1,1,0deg);
+        }
+        100%{
+            transform: rotate3d(1, 1,1,760deg);
+        }
+    }
+    /*-----------------------------*/
+    img{
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        box-shadow: black 5px 5px 7px;
+
+    }
+    img:hover{
+        opacity: 0.5;
+    }
+    /*每张图片绕着自身的x或y轴转后，Z轴也会跟着旋转，绕X往后的度数为正值，绕Y轴往右的度数为正，向Z轴平移量为图片宽度的一半*/
+    #img1{
+        transform:rotateX(0deg) translateZ(200px);
+    }
+    #img2{
+        transform:rotateX(0deg) translateZ(-200px);
+
+    }
+    #img3{
+        transform:rotateY(90deg) translateZ(-200px);
+
+    }
+    #img4{
+        transform:rotateY(90deg) translateZ(200px);
+
+    }
+    #img5{
+        transform:rotateX(90deg) translateZ(200px);
+
+    }
+    #img6{
+        transform:rotateX(90deg) translateZ(-200px);
+
+    }
+    /*-----------------*/
+
+    #simg1{
+        transform:rotateX(0deg) translateZ(100px);
+    }
+    #simg2{
+        transform:rotateX(0deg) translateZ(-100px);
+
+    }
+    #simg3{
+        transform:rotateY(90deg) translateZ(-100px);
+
+    }
+    #simg4{
+        transform:rotateY(90deg) translateZ(100px);
+
+    }
+    #simg5{
+        transform:rotateX(90deg) translateZ(100px);
+
+    }
+    #simg6{
+        transform:rotateX(90deg) translateZ(-100px);
+
+    }
+    /*----------------------- 悬浮产生距离---------*/
+    #con:hover #img1{
+        transform:rotateY(0deg) translateZ(300px);
+    }
+    #con:hover #img2{
+        transform:rotateX(180deg) translateZ(300px);
+    }
+    #con:hover #img3{
+        transform:rotateY(90deg) translateZ(300px);
+    }
+    #con:hover #img4{
+        transform:rotateY(-90deg) translateZ(300px);
+    }
+    #con:hover #img5{
+        transform:rotateX(90deg) translateZ(300px);
+    }
+    #con:hover #img6{
+        transform:rotateX(90deg) translateZ(-300px);
+    }
+
+
+
+<!--</style>-->
+<div class="con" id="con">
+    <img  id="img1" src="../img/greengirl.jpg" alt="">
+    <img  id="img2" src="../img/ccce6e770d1edb6035c63fef7c0cc136.jpg" alt="">
+    <img  id="img3" src="../img/flower.jpg" alt="">
+    <img  id="img4" src="../img/mm.jpg" alt="">
+    <img  id="img5" src="../img/redgirl.jpg" alt="">
+    <img  id="img6" src="../img/star.jpg" alt="">
+    <!---------------->
+    <div class="son">
+        <img  id="simg6" src="../img/greengirl.jpg" alt="">
+        <img  id="simg5" src="../img/ccce6e770d1edb6035c63fef7c0cc136.jpg" alt="">
+        <img  id="simg4" src="../img/flower.jpg" alt="">
+        <img  id="simg3" src="../img/mm.jpg" alt="">
+        <img  id="simg2" src="../img/redgirl.jpg" alt="">
+        <img  id="simg1" src="../img/star.jpg" alt="">
     </div>
-    <a class="left carousel-control" href="#carousel-example" data-slide="prev"><i class="icon-prev  fa fa-angle-left"></i></a>
-    <a class="right carousel-control" href="#carousel-example" data-slide="next"><i class="icon-next fa fa-angle-right"></i></a>
 </div>
 
-<!--<style>-->
-    <!--.father{-->
-        <!--width: 100%;-->
-        <!--height: 400px;-->
-    <!--}-->
-    <!--.con{-->
-        <!--height: 400px;-->
-        <!--width: 400px;-->
-        <!--margin: 200px auto;-->
-        <!--/*background-color: red;*/-->
-        <!--position: relative;-->
-        <!--animation: my 30s 15;-->
-
-        <!--perspective: 2000000px;-->
-        <!--perspective-origin: 50% 50%;-->
-        <!--transform-style: preserve-3d;-->
-    <!--}-->
-    <!--/*&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;*/-->
-    <!--.son{-->
-        <!--height: 200px;-->
-        <!--width: 200px;-->
-        <!--/*background-color: #5cff3b;*/-->
-        <!--position: absolute;-->
-        <!--top: 100px;-->
-        <!--left: 100px;-->
-        <!--/*transform: rotateX(35deg);*/-->
-        <!--animation: my 15s 15;-->
-
-        <!--perspective: 2000000px;-->
-        <!--perspective-origin: 50% 50%;-->
-        <!--transform-style: preserve-3d;-->
-    <!--}-->
-    <!--@keyframes my {-->
-        <!--/*如果你要沿着该轴转动那就将该轴的值设置为1，否则为0；然后在后面的angle中设置旋转的角度，需要注意的是，angle只有一个角度值。*/-->
-        <!--0%{-->
-            <!--transform: rotate3d(1, 1,1,0deg);-->
-        <!--}-->
-        <!--100%{-->
-            <!--transform: rotate3d(1, 1,1,760deg);-->
-        <!--}-->
-    <!--}-->
-    <!--/*-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;*/-->
-    <!--img{-->
-        <!--height: 100%;-->
-        <!--width: 100%;-->
-        <!--position: absolute;-->
-        <!--box-shadow: black 5px 5px 7px;-->
-
-    <!--}-->
-    <!--img:hover{-->
-        <!--opacity: 0.5;-->
-    <!--}-->
-    <!--/*每张图片绕着自身的x或y轴转后，Z轴也会跟着旋转，绕X往后的度数为正值，绕Y轴往右的度数为正，向Z轴平移量为图片宽度的一半*/-->
-    <!--#img1{-->
-        <!--transform:rotateX(0deg) translateZ(200px);-->
-    <!--}-->
-    <!--#img2{-->
-        <!--transform:rotateX(0deg) translateZ(-200px);-->
-
-    <!--}-->
-    <!--#img3{-->
-        <!--transform:rotateY(90deg) translateZ(-200px);-->
-
-    <!--}-->
-    <!--#img4{-->
-        <!--transform:rotateY(90deg) translateZ(200px);-->
-
-    <!--}-->
-    <!--#img5{-->
-        <!--transform:rotateX(90deg) translateZ(200px);-->
-
-    <!--}-->
-    <!--#img6{-->
-        <!--transform:rotateX(90deg) translateZ(-200px);-->
-
-    <!--}-->
-    <!--/*-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;*/-->
-
-    <!--#simg1{-->
-        <!--transform:rotateX(0deg) translateZ(100px);-->
-    <!--}-->
-    <!--#simg2{-->
-        <!--transform:rotateX(0deg) translateZ(-100px);-->
-
-    <!--}-->
-    <!--#simg3{-->
-        <!--transform:rotateY(90deg) translateZ(-100px);-->
-
-    <!--}-->
-    <!--#simg4{-->
-        <!--transform:rotateY(90deg) translateZ(100px);-->
-
-    <!--}-->
-    <!--#simg5{-->
-        <!--transform:rotateX(90deg) translateZ(100px);-->
-
-    <!--}-->
-    <!--#simg6{-->
-        <!--transform:rotateX(90deg) translateZ(-100px);-->
-
-    <!--}-->
-    <!--/*-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; 悬浮产生距离-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;*/-->
-    <!--#con:hover #img1{-->
-        <!--transform:rotateY(0deg) translateZ(300px);-->
-    <!--}-->
-    <!--#con:hover #img2{-->
-        <!--transform:rotateX(180deg) translateZ(300px);-->
-    <!--}-->
-    <!--#con:hover #img3{-->
-        <!--transform:rotateY(90deg) translateZ(300px);-->
-    <!--}-->
-    <!--#con:hover #img4{-->
-        <!--transform:rotateY(-90deg) translateZ(300px);-->
-    <!--}-->
-    <!--#con:hover #img5{-->
-        <!--transform:rotateX(90deg) translateZ(300px);-->
-    <!--}-->
-    <!--#con:hover #img6{-->
-        <!--transform:rotateX(90deg) translateZ(-300px);-->
-    <!--}-->
-
-
-
-<!--&lt;!&ndash;</style>&ndash;&gt;-->
-<!--<div class="con" id="con">-->
-    <!--<img  id="img1" src="../img/greengirl.jpg" alt="">-->
-    <!--<img  id="img2" src="../img/ccce6e770d1edb6035c63fef7c0cc136.jpg" alt="">-->
-    <!--<img  id="img3" src="../img/flower.jpg" alt="">-->
-    <!--<img  id="img4" src="../img/mm.jpg" alt="">-->
-    <!--<img  id="img5" src="../img/redgirl.jpg" alt="">-->
-    <!--<img  id="img6" src="../img/star.jpg" alt="">-->
-    <!--&lt;!&ndash;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
-    <!--<div class="son">-->
-        <!--<img  id="simg6" src="../img/greengirl.jpg" alt="">-->
-        <!--<img  id="simg5" src="../img/ccce6e770d1edb6035c63fef7c0cc136.jpg" alt="">-->
-        <!--<img  id="simg4" src="../img/flower.jpg" alt="">-->
-        <!--<img  id="simg3" src="../img/mm.jpg" alt="">-->
-        <!--<img  id="simg2" src="../img/redgirl.jpg" alt="">-->
-        <!--<img  id="simg1" src="../img/star.jpg" alt="">-->
-    <!--</div>-->
-<!--</div>-->
 
 
 
