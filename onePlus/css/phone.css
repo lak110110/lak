@@ -1,0 +1,331 @@
+@charset "utf-8";
+@media screen and (max-width: 766px) {
+  @font-face {
+    font-family: 'iconfont';
+    src: url('../css/font/iconfont.eot');
+    src: url('../css/font/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../css/font/iconfont.woff') format('woff'), /* chrome、firefox */ url('../css/font/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url('../css/font/iconfont.svg#iconfont') format('svg');
+    
+    /* IE9*/
+    /* iOS 4.1- */
+  }
+  .iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+  }
+  .tou {
+    height: 80px;
+    width: 100%;
+  }
+  .iconfont:hover {
+    text-decoration: none;
+    text-align: center;
+  }
+  header {
+    height: 80px;
+    width: 100%;
+  }
+  header .p-nav {
+    height: 80px;
+    width: 100%;
+    position: relative;
+  }
+  header .p-nav .logo {
+    height: 44px;
+    width: 44px;
+    margin-top: 15px;
+    float: left;
+    margin-left: 20px;
+  }
+  header .p-nav .drop-item {
+    width: 100%;
+    height: 330px;
+    background-color: #f3f3f3;
+    position: absolute;
+    z-index: 99;
+    display: none;
+    left: 0;
+    top: 80px;
+  }
+  header .p-nav .drop-item li {
+    width: 90%;
+    height: 44px;
+    line-height: 44px;
+    margin: 0 auto;
+    text-align: left;
+    border-bottom: 1px solid rgba(74, 74, 74, 0.3);
+    color: rgba(74, 74, 74, 0.6);
+  }
+  header .p-nav .drop-item li:hover {
+    color: #000000;
+  }
+  header .p-nav .drop-item li input {
+    width: 96%;
+    height: 98%;
+    float: left;
+    border: none;
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  header .p-nav .drop-item li span {
+    float: left;
+    font-size: 20px;
+    background-color: white;
+    font-weight: bold;
+  }
+  header ul {
+    display: none;
+  }
+  header .c-item {
+    display: none;
+  }
+  header .p-item {
+    height: 80px;
+    width: 70%;
+    float: right;
+    margin-right: 10px;
+    position: relative;
+  }
+  header .p-item a,
+  header .p-item i {
+    display: inline-block;
+    width: 20%;
+    height: 60px;
+    margin: 10px auto;
+    line-height: 60px;
+    font-size: 25px;
+    color: rgba(0, 0, 0, 0.5);
+    float: right;
+  }
+  header .p-item a:hover,
+  header .p-item i:hover {
+    color: black;
+  }
+  header .p-item a:hover div,
+  header .p-item i:hover div {
+    height: 60px;
+  }
+  header .p-item a div,
+  header .p-item i div {
+    width: 280px;
+    height: 0px;
+    overflow: hidden;
+    position: absolute;
+    z-index: 98;
+    left: -10px;
+    line-height: 60px;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 5px black;
+    background-color: white;
+  }
+  section .show-img {
+    width: 100%;
+    height: auto;
+  }
+  section .show-img li {
+    width: 100%;
+    height: 300px;
+    position: relative;
+  }
+  section .show-img li img {
+    width: 100%;
+    height: 100%;
+  }
+  section .show-img li h3 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+  }
+  section .show-bg {
+    width: 100%;
+    height: 730px;
+    position: relative;
+  }
+  section .show-bg img {
+    width: 100%;
+    height: 100%;
+  }
+  section .show-bg h1 {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+  }
+  section .show-bg div {
+    width: 134px;
+    height: 44px;
+    position: absolute;
+    top: 42%;
+    left: 38%;
+    line-height: 44px;
+    border: 2px solid white;
+    color: white;
+    overflow: hidden;
+  }
+  section .show-bg div:hover div {
+    width: 136px;
+    transition: all 0.5s;
+  }
+  section .show-bg div:hover {
+    color: #ff1a17;
+    transition: all 0.5s;
+  }
+  section .show-bg div div {
+    width: 0px;
+    height: 44px;
+    position: absolute;
+    top: 0;
+    left: -5px;
+    background-color: rgba(225, 225, 225, 0.3);
+    color: black;
+    border: none;
+  }
+  .shadow-img {
+    width: 90%;
+    height: auto;
+    margin: 50px auto;
+  }
+  .shadow-img li {
+    width: 100%;
+    height: auto;
+    margin-top: 25px;
+  }
+  .shadow-img li:hover {
+    box-shadow: 3px 2px 10px black;
+    transform: translateY(-5px);
+    transition: all 0.3s;
+  }
+  .shadow-img li img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .shadow-img li div p {
+    height: 50px;
+  }
+  .show-hou {
+    width: 90%;
+    height: auto;
+    margin: 40px auto;
+    background-color: white;
+    display: flex;
+    clear: both;
+  }
+  .show-hou li {
+    width: 25%;
+    margin-top: 30px;
+  }
+  .show-hou li p {
+    margin: 15px 0;
+  }
+  .show-hou li p:hover {
+    color: #ff0000;
+  }
+  .show1-hou {
+    width: 90%;
+    height: auto;
+    margin: 40px auto;
+    background-color: white;
+    clear: both;
+  }
+  .show1-hou ul {
+    width: 100%;
+    height: auto;
+    display: flex;
+  }
+  .show1-hou ul li {
+    width: 50%;
+    height: 141px;
+    margin-top: 30px;
+  }
+  .show1-hou ul li p {
+    margin: 15px 0;
+  }
+  .show1-hou ul li p:hover {
+    color: #ff0000;
+  }
+  .introduce {
+    display: none;
+  }
+  .p-introduce {
+    width: 100%;
+    height: auto;
+  }
+  .p-introduce li {
+    width: 100%;
+    height: auto;
+  }
+  .p-introduce li h3 {
+    width: 100%;
+    margin: 0px auto;
+    text-align: left;
+    line-height: 35px;
+    height: 35px;
+    border-bottom: 1px solid rgba(87, 87, 87, 0.3);
+  }
+  .p-introduce li h3:hover strong {
+    transform: rotateZ(-90deg);
+    transition: all 1s;
+  }
+  .p-introduce li h3 strong {
+    float: right;
+    margin-right: 20px;
+  }
+  .p-introduce li ul {
+    width: 90%;
+    height: auto;
+    margin-top: 20px;
+    display: none;
+  }
+  .p-introduce li ul li {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: left;
+    margin: 0 auto;
+    border: none;
+  }
+  .b2 {
+    display: none;
+  }
+  .b4 {
+    width: 100%;
+    height: 103px;
+    background-size: 100% 100%;
+    background: url("../img/b4.png");
+  }
+}
+@media screen and (max-width: 470px) {
+  header .p-nav .drop-item li input {
+    width: 100%;
+  }
+  header .p-nav .drop-item li span {
+    display: none;
+  }
+}
+@media screen and (max-width: 550px) {
+  .show-hou {
+    display: none;
+  }
+}
+@media screen and (min-width: 550px) {
+  .show1-hou {
+    display: none;
+  }
+}

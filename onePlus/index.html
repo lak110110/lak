@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>onePlus</title>
+    <script src="../jquery/jquery-3.0.0.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<header>
+    <nav class="c-nav p-nav">
+        <hr>
+        <div class="logo">
+            <a href=""><img src="img/logo.png" alt=""></a>
+        </div>
+        <ul>
+            <li style="margin-left: 18%;width:20% "><a href="">一加手机3 <i></i></a></li>
+            <li><a href="">商城 <i></i></a></li>
+            <li><a href="">服务 <i></i></a></li>
+            <li><a href="">博客 <i></i></a></li>
+            <li><a href="">论坛 <i></i></a></li>
+        </ul>
+        <div class="c-item">
+            <a href="" class="iconfont">&#xe62f;</a>
+            <a href="" class="iconfont">&#xe607;
+                <div>
+                    你的购物车里没有商品！！
+                </div>
+            </a>
+            <a href="" class="iconfont">&#x3575;</a>
+        </div>
+        <div class="p-item">
+            <i class="iconfont">&#xe600;</i>
+            <a href="" class="iconfont">&#xe607;
+                <div>
+                    你的购物车里没有商品！！
+                </div>
+            </a>
+            <a href="" class="iconfont">&#xe62f;</a>
+        </div>
+        <div class="drop-item">
+            <li style="margin-top: 16px">一加手机3</li>
+            <li>手机系列</li>
+            <li>服务</li>
+            <li>博客</li>
+            <li>商城</li>
+            <li>社区</li>
+            <li><input type="text" placeholder="输入要搜索的商品"><span class="iconfont">&#xe613;</span></li>
+        </div>
+    </nav>
+</header>
+<section>
+    <!---------------------img-->
+    <style>
+    #carousel-example{
+    height: 550px;
+    }
+    #carousel-example .carousel-inner{
+        height: 100%;
+    }
+    #carousel-example .carousel-inner ul{
+        height: 30px;
+        width: 60px;
+        position: absolute;
+        bottom: 50px;
+        left: 45%;
+    }
+    #carousel-example .carousel-inner ul li{
+        height: 30px;
+        width: 30px;
+        background-color: #fff677;
+        float: left;
+        border-radius: 50%;
+    }
+    /*#carousel-example .carousel-inner ul .active{*/
+        /*background-color: #64ff2e;*/
+    /*}*/
+    #carousel-example .carousel-inner .item{height: 100%}
+    #carousel-example .carousel-inner .item img{
+        display: block;
+        height: 100%;
+        width: 100%;
+    }
+    </style>
+    <div id="carousel-example" data-interval="4000" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+    <div class="item active">
+    <img src="img/lang-large.jpg">
+    </div>
+    <div class="item">
+    <img src="img/op327-large.jpg">
+    </div>
+        <ul>
+            <li class="item active"></li>
+            <li class="item"></li>
+        </ul>
+    </div>
+    <a style="top: 30px" class="left carousel-control" href="#carousel-example" data-slide="prev"><i style="text-align: center;font-size: 40px;line-height: 560px" class="fa fa-angle-left"> < </i></a>
+    <a style="top: 30px" class="right carousel-control" href="#carousel-example" data-slide="next"><i style="text-align: center;font-size: 40px;line-height: 560px" class="fa fa-angle-right"> ></i></a>
+    </div>
+    <!--------------------------------------------------------------------------------------------->
+ <!--图片展示区-->
+    <ul class="show-img">
+        <li><a href=""><img src="img/rom2.jpg" alt=""></a>
+            <h3>一加3 ROM适配大赛</h3>
+        </li>
+        <li><a href=""><img src="img/shenghuo.jpg" alt=""></a>
+            <h3>天生一对 出行套装</h3>
+        </li>
+        <li><a href=""><img src="img/laoyonghu.jpg" alt=""></a>
+        <h3>领取老用户福利半年屏碎保</h3></li>
+    </ul>
+    <div class="show-bg">
+        <img src="img/OP0919-large.jpg" alt="">
+        <h1>每天一张好照片</h1>
+        <div>我要参加
+            <div></div>
+        </div>
+    </div>
+   <!-----------------------有阴影的图片-->
+    <ul class="shadow-img">
+        <li style="margin-left: 0"><a href=""><img src="img/blog0816.jpg" alt=""></a>
+            <div style="margin-top: 20px">
+                <h4 style="text-align: left;margin-left: 20px;font-weight: bold">博客</h4>
+                <p style="text-align: left;margin-left: 20px">包包做的最好的公司！</p>
+            </div>
+
+        </li>
+        <li><a href=""><img src="img/op3.jpg" alt=""></a>
+            <div style="margin-top: 20px">
+                <h4 style="text-align: left;margin-left: 20px;font-weight: bold">视频</h4>
+                <p style="text-align: left;margin-left: 20px">一加手机3产品视频</p>
+            </div></li>
+        <li><a href=""><img src="img/xinwen1.jpg" alt=""></a>
+            <div style="margin-top: 20px">
+                <h4 style="text-align: left;margin-left: 20px;font-weight: bold">新闻</h4>
+                <p style="text-align: left;margin-left: 20px">史上最全一加手机3媒体报道</p>
+            </div></li>
+    </ul>
+    <!--信誉保证,售后服务-------------------------->
+    <ul class="show-hou">
+        <li><a href=""><img src="img/shi.png" alt=""></a>
+            <p>一小时派单售后响应</p>
+        </li>
+        <li><a href=""><img src="img/qi.png" alt=""></a>
+        <p>七天无理由退货</p>
+        </li>
+        <li><a href=""><img src="img/wu.png" alt=""></a>
+            <p>十五天服务保障</p>
+        </li>
+        <li><a href=""><img src="img/san.png" alt=""></a>
+            <p>三十天换货保证</p>
+        </li>
+    </ul>
+    <ul class="show1-hou">
+        <ul>
+        <li><a href=""><img src="img/shi.png" alt=""></a>
+            <p>一小时派单售后响应</p>
+        </li>
+        <li><a href=""><img src="img/qi.png" alt=""></a>
+        <p>七天无理由退货</p>
+        </li>
+        </ul>
+        <ul>
+        <li><a href=""><img src="img/wu.png" alt=""></a>
+            <p>十五天服务保障</p>
+        </li>
+        <li><a href=""><img src="img/san.png" alt=""></a>
+            <p>三十天换货保证</p>
+        </li>
+        </ul>
+    </ul>
+    <hr>
+   <!-- ---------------------------企业介绍-->
+    <div class="introduce">
+        <ul>
+            <h3>一加产品3</h3>
+            <li>一加手机X</li>
+            <li>一加手机2</li>
+            <li>一加手机1</li>
+        </ul>
+        <ul>
+            <h3>关于一加</h3>
+            <li>了解一加</li>
+            <li>关于一加</li>
+            <li>H2OS</li>
+        </ul>
+        <ul>
+            <h3>服务支持</h3>
+            <li>自助服务</li>
+            <li>技术支持</li>
+            <li>售后服务</li>
+            <li>一加多宝</li>
+        </ul>
+        <ul style="width: 35%;margin-left: 5%">
+            <h1>400-800-1111</h1>
+            <li style="border: 1px solid black;height: 50px;line-height: 50px">在线客服</li>
+
+        </ul>
+    </div>
+
+    <!---------------------------企业介绍手机版-------->
+    <ul class="p-introduce">
+        <li>
+            <h3>&nbsp;&nbsp;&nbsp;&nbsp;一加产品<strong> ></strong></h3>
+            <ul>
+                <li style="margin-top: 10px"> &nbsp;&nbsp;&nbsp;&nbsp;一加手机3</li>
+                <li> &nbsp;&nbsp;&nbsp;&nbsp;一加手机X</li>
+                <li>&nbsp;&nbsp;&nbsp;&nbsp; 一加手机2</li>
+                <li> &nbsp;&nbsp;&nbsp;&nbsp;一加手机1</li>
+            </ul>
+
+        </li>
+        <li>
+        <h3>&nbsp;&nbsp;&nbsp;&nbsp;关于一加<strong> ></strong></h3>
+            <ul>
+                <li>&nbsp;&nbsp;&nbsp;&nbsp;了解一加</li>
+                <li>&nbsp;&nbsp;&nbsp;&nbsp;关于一加</li>
+                <li>&nbsp;&nbsp;&nbsp;&nbsp;H2OS</li>
+            </ul>
+
+        </li>
+        <li>
+        <h3>&nbsp;&nbsp;&nbsp;&nbsp;服务支持<strong> ></strong></h3>
+            <ul>
+                <li>&nbsp;&nbsp;&nbsp;&nbsp;自助服务</li>
+                <li>&nbsp;&nbsp;&nbsp;&nbsp;技术支持</li>
+                <li>&nbsp;&nbsp;&nbsp;&nbsp;售后服务</li>
+                <li>&nbsp;&nbsp;&nbsp;&nbsp;一加多宝</li>
+            </ul>
+
+        </li>
+        <li style="height: 40px;line-height: 40px;text-align: left;color: rgba(87, 87, 87, 0.76)">
+            &nbsp;&nbsp;&nbsp;&nbsp;客服电话&nbsp;&nbsp;<span style="color: #0e26ff">400-888-1111</span>
+        </li>
+        <li style="height: 50px;line-height: 50px;text-align: center;border: 1px solid black">
+            在线客服
+        </li>
+
+    </ul>
+
+</section>
+<footer class="b2"></footer>
+<footer class="b4"></footer>
+
+
+</body>
+</html>
